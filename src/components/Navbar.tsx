@@ -40,17 +40,6 @@ export default function Navbar() {
                         {navLinks.map((link) => {
                             const isActive = pathname === link.href;
 
-                            if (link.onClick) {
-                                return (
-                                    <button
-                                        key={link.name}
-                                        onClick={link.onClick}
-                                        className={`text-[10px] uppercase tracking-[0.2em] font-bold transition-all hover:text-accent-gold text-deep-charcoal/80 hover:text-primary-bronze`}
-                                    >
-                                        {link.name}
-                                    </button>
-                                );
-                            }
 
                             return (
                                 <Link
@@ -95,20 +84,6 @@ export default function Navbar() {
                                 {navLinks.map((link) => {
                                     const isActive = pathname === link.href;
 
-                                    if (link.onClick) {
-                                        return (
-                                            <button
-                                                key={link.name}
-                                                onClick={() => {
-                                                    link.onClick?.();
-                                                    setIsOpen(false);
-                                                }}
-                                                className={`text-sm uppercase tracking-[0.2em] font-bold p-4 rounded-xl transition-all text-left text-deep-charcoal/80 hover:bg-warm-alabaster`}
-                                            >
-                                                {link.name}
-                                            </button>
-                                        );
-                                    }
 
                                     return (
                                         <Link
