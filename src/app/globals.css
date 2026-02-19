@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors - Minimalist Luxury */
+  --color-primary-bronze: #8e735b;
+  --color-accent-gold: #c5a059;
+  --color-deep-charcoal: #1a1a1a;
+  --color-warm-alabaster: #fcfbf9;
+
+  /* Fonts */
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+
+  /* Shadows */
+  --shadow-glow-gold: 0 20px 40px -10px rgba(197, 160, 89, 0.2);
+
+  /* Radius Tokens */
+  --radius-button: 9999px;
+  --radius-card: 24px;
+}
+
+/* Custom Utilities */
+.btn-premium {
+  @apply px-10 py-4 uppercase text-[10px] font-bold tracking-[0.3em] transition-all duration-700 border border-primary-bronze hover:bg-primary-bronze hover:text-white;
+  border-radius: var(--radius-button);
+}
+
+.bg-gradient-premium {
+  background-image: linear-gradient(135deg, #8e735b 0%, #c5a059 100%);
+}
+
+.glass-panel {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl shadow-primary-bronze/5;
+  border-radius: var(--radius-card);
+}
+
+.section-divider {
+  @apply w-full h-[1px] bg-primary-bronze/10 my-16;
+}
+
+/* Base Styles */
+body {
+  @apply font-sans antialiased text-deep-charcoal bg-white relative isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url('/images/patterns/calacatta_gold_marble.png');
+  background-size: 800px;
+  opacity: 0.3;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-serif tracking-tight font-normal;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
