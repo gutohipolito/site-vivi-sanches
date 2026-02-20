@@ -5,18 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MessageCircle, Menu, X } from "lucide-react";
+import { navLinks, NavLinkItem } from "@/constants/navigation";
 
 export default function Navbar() {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
 
-    const navLinks = [
-        { name: "A Clínica", href: "/clinica" },
-        { name: "Dra. Vivian", href: "/dra-vivian-sanches" },
-        { name: "Serviços", href: "/servicos" },
-        { name: "Dicas de Saúde", href: "/dicas-de-saude" },
-        { name: "Contato", href: "/contato" }
-    ];
+
 
     return (
         <>
@@ -37,9 +32,20 @@ export default function Navbar() {
 
                     {/* Desktop Menu */}
                     <div className="hidden lg:flex gap-10">
-                        {navLinks.map((link) => {
+                        {navLinks.map((link: NavLinkItem) => {
                             const isActive = pathname === link.href;
 
+                            if (link.onClick) {
+                                return (
+                                    <button
+                                        key={link.name}
+                                        onClick={link.onClick}
+                                        className={`text-[10px] uppercase tracking-[0.2em] font-bold transition-all hover:text-accent-gold ${isActive ? 'text-primary-bronze' : 'text-deep-charcoal/80 hover:text-primary-bronze'}`}
+                                    >
+                                        {link.name}
+                                    </button>
+                                );
+                            }
 
                             return (
                                 <Link
@@ -81,9 +87,23 @@ export default function Navbar() {
                                 transition={{ duration: 0.2 }}
                                 className="absolute top-full left-0 right-0 mt-4 bg-white/95 backdrop-blur-xl rounded-[2rem] shadow-2xl shadow-primary-bronze/10 border border-white/50 p-6 flex flex-col gap-4 lg:hidden overflow-hidden"
                             >
-                                {navLinks.map((link) => {
+                                {navLinks.map((link: NavLinkItem) => {
                                     const isActive = pathname === link.href;
 
+                                    if (link.onClick) {
+                                        return (
+                                            <button
+                                                key={link.name}
+                                                onClick={() => {
+                                                    if (link.onClick) link.onClick();
+                                                    setIsOpen(false);
+                                                }}
+                                                className={`w-full text-left text-sm uppercase tracking-[0.2em] font-bold p-4 rounded-xl transition-all ${isActive ? 'bg-primary-bronze/10 text-primary-bronze' : 'text-deep-charcoal/80 hover:bg-warm-alabaster'}`}
+                                            >
+                                                {link.name}
+                                            </button>
+                                        );
+                                    }
 
                                     return (
                                         <Link
