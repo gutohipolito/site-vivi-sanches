@@ -15,9 +15,9 @@ export default function AboutSection() {
                     </div>
                     <div className="lg:col-span-7 pt-12 lg:pt-20">
                         <p className="text-2xl text-deep-charcoal/60 font-serif leading-relaxed italic max-w-2xl">
-                            "Focamos na deteção e restabelecimento de desajustes nutricionais que
+                            &quot;Focamos na deteção e restabelecimento de desajustes nutricionais que
                             alteram o funcionamento pleno do seu organismo, priorizando a longevidade
-                            e performance real."
+                            e performance real.&quot;
                         </p>
                     </div>
                 </div>

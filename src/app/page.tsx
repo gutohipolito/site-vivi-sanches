@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+
 
 export default function Home() {
   return (
@@ -40,7 +40,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 flex items-center justify-center z-20 p-10 text-center">
                 <h3 className="text-4xl md:text-6xl font-serif text-white leading-tight drop-shadow-lg max-w-4xl">
-                  "Estrutura completa para um atendimento de excelência."
+                  &quot;Estrutura completa para um atendimento de excelência.&quot;
                 </h3>
               </div>
             </div>
@@ -139,7 +139,7 @@ export default function Home() {
                 Personalidades
               </h2>
               <h3 className="text-3xl md:text-5xl font-serif text-white leading-tight max-w-4xl mx-auto">
-                "Alimente sua mente com <span className="italic text-accent-gold opacity-80">pensamentos saudáveis</span> para que seu corpo possa refletir saúde."
+                &quot;Alimente sua mente com <span className="italic text-accent-gold opacity-80">pensamentos saudáveis</span> para que seu corpo possa refletir saúde.&quot;
               </h3>
               <p className="text-white/40 text-sm uppercase tracking-[0.2em] pt-4">
                 Confira as personalidades que já passaram pela clínica!

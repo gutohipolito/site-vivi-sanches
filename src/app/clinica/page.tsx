@@ -1,7 +1,7 @@
 import Gallery from "@/components/Gallery";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Scale, Activity, Camera, Heart, Lightbulb, ShieldCheck, Users, Smartphone, Clock, Utensils, MessageCircle, Star, Sparkles, ArrowRight } from "lucide-react";
+import { Scale, Activity, Camera, Heart, Lightbulb, ShieldCheck, Users, Smartphone, Clock, Utensils, MessageCircle, Sparkles, ArrowRight } from "lucide-react";
 
 export default function Clinica() {
     const galleryImages = [
@@ -124,7 +124,7 @@ export default function Clinica() {
                     <div className="text-center max-w-4xl mx-auto space-y-8">
                         <span className="text-[10px] uppercase tracking-[0.4em] font-black text-primary-bronze">Nossa Essência</span>
                         <h2 className="text-3xl md:text-5xl font-serif text-deep-charcoal leading-tight">
-                            <span className="italic font-light opacity-60">"Na essência de nossa missão encontramos propósito..."</span>
+                            <span className="italic font-light opacity-60">&quot;Na essência de nossa missão encontramos propósito...&quot;</span>
                         </h2>
                         <p className="text-lg text-deep-charcoal/60 font-sans leading-relaxed">
                             Empenhamo-nos em capacitar e inspirar nossos clientes a atingirem uma qualidade de vida elevada e longevidade saudável.

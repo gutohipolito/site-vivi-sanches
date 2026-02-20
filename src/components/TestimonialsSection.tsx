@@ -37,7 +37,7 @@ export default function TestimonialsSection() {
                             className="space-y-12"
                         >
                             <p className="text-lg text-deep-charcoal/50 font-sans italic leading-relaxed">
-                                "{t.text}"
+                                &quot;{t.text}&quot;
                             </p>
                             <div className="space-y-2">
                                 <span className="block text-xs uppercase tracking-[0.4em] font-black text-primary-bronze">{t.name}</span>

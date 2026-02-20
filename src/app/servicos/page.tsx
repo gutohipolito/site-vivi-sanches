@@ -3,8 +3,7 @@ import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { Scale, Smartphone, Clock, Utensils, MessageCircle, Sparkles, ArrowRight } from "lucide-react";
 
-const services = []; // Kept empty or removed entirely if not needed. 
-// Actually removing the block.
+
 
 export default function Servicos() {
     return (
@@ -110,8 +109,8 @@ export default function Servicos() {
                             </p>
                             <div className="bg-white/5 border-l-2 border-accent-gold p-6 rounded-r-xl">
                                 <p className="text-sm italic text-white/90">
-                                    "O exame é aprovado pela Organização Mundial da Saúde (OMS) e funciona como um orientador para que as metas do planejamento
-                                    alimentar e de seu treino atuem de forma mais intensa naquilo que o seu corpo precisa."
+                                    &quot;O exame é aprovado pela Organização Mundial da Saúde (OMS) e funciona como um orientador para que as metas do planejamento
+                                    alimentar e de seu treino atuem de forma mais intensa naquilo que o seu corpo precisa.&quot;
                                 </p>
                             </div>
                         </div>

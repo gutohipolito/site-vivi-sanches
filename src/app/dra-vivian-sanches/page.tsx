@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import PageHeader from "@/components/PageHeader";
+
 import { Award, Heart, ArrowRight } from "lucide-react";
 
 export default function DraVivian() {
@@ -25,7 +25,7 @@ export default function DraVivian() {
                         <div className="w-24 h-px bg-primary-bronze/30"></div>
 
                         <h2 className="text-2xl font-serif italic text-deep-charcoal/60 leading-relaxed">
-                            "Minha missão é traduzir a complexidade bioquímica em hábitos simples e poderosos."
+                            &quot;Minha missão é traduzir a complexidade bioquímica em hábitos simples e poderosos.&quot;
                         </h2>
                     </div>
 
