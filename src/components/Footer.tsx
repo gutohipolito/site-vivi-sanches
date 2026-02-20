@@ -1,6 +1,6 @@
 "use client";
 
-import { Instagram, Mail, Phone, MapPin, Clock, Apple, Grape, Map, Navigation } from "lucide-react";
+import { Instagram, Phone, MapPin, Clock, Map, Navigation } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";

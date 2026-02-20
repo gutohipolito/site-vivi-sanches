@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { Scale, Smartphone, Clock, Utensils, MessageCircle, Sparkles, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 
 
@@ -23,9 +24,11 @@ export default function Servicos() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="relative group flex justify-center">
                         <div className="absolute inset-0 bg-primary-bronze/20 blur-[60px] rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
-                        <img
+                        <Image
                             src="/images/clinica/nutricao_funcional_1_servicos.png"
                             alt="Nutrição Estética"
+                            width={500}
+                            height={500}
                             className="relative z-10 w-4/5 object-contain transform group-hover:scale-105 transition-transform duration-700 drop-shadow-2xl"
                         />
                     </div>
@@ -46,9 +49,11 @@ export default function Servicos() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="lg:order-2 relative group flex justify-center">
                         <div className="absolute inset-0 bg-accent-gold/20 blur-[60px] rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
-                        <img
+                        <Image
                             src="/images/clinica/nutricao_funcional_2_servicos.png"
                             alt="Nutrição Funcional"
+                            width={500}
+                            height={500}
                             className="relative z-10 w-4/5 object-contain transform group-hover:scale-105 transition-transform duration-700 drop-shadow-2xl"
                         />
                     </div>
@@ -68,9 +73,11 @@ export default function Servicos() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="relative group flex justify-center">
                         <div className="absolute inset-0 bg-primary-bronze/20 blur-[60px] rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
-                        <img
+                        <Image
                             src="/images/clinica/nutricao_funcional_3_servicos.png"
                             alt="Nutrição Esportiva"
+                            width={500}
+                            height={500}
                             className="relative z-10 w-4/5 object-contain transform group-hover:scale-105 transition-transform duration-700 drop-shadow-2xl"
                         />
                     </div>
@@ -117,9 +124,11 @@ export default function Servicos() {
                     </div>
                     <div className="lg:order-1 relative flex justify-center">
                         <div className="absolute inset-0 bg-accent-gold/20 blur-[80px] rounded-full opacity-60"></div>
-                        <img
+                        <Image
                             src="/images/clinica/bioimpedancia.png"
                             alt="Exame de Bioimpedância"
+                            width={500}
+                            height={500}
                             className="relative z-10 w-4/5 object-contain drop-shadow-2xl"
                         />
                     </div>
@@ -148,9 +157,11 @@ export default function Servicos() {
 
                             <div className="relative z-10 flex flex-col items-center text-center space-y-8">
                                 <div className="w-32 h-32 rounded-full bg-warm-alabaster flex items-center justify-center border border-white shadow-inner group-hover:scale-105 transition-transform duration-500">
-                                    <img
+                                    <Image
                                         src="/images/clinica/adipometro.png"
                                         alt="Ícone Adipômetro"
+                                        width={80}
+                                        height={80}
                                         className="w-20 h-20 object-contain opacity-80 group-hover:opacity-100 transition-opacity"
                                     />
                                 </div>
@@ -171,9 +182,11 @@ export default function Servicos() {
 
                             <div className="relative z-10 flex flex-col items-center text-center space-y-8">
                                 <div className="w-32 h-32 rounded-full bg-warm-alabaster flex items-center justify-center border border-white shadow-inner group-hover:scale-105 transition-transform duration-500">
-                                    <img
+                                    <Image
                                         src="/images/clinica/fotos.png"
                                         alt="Ícone Fotos"
+                                        width={80}
+                                        height={80}
                                         className="w-20 h-20 object-contain opacity-80 group-hover:opacity-100 transition-opacity"
                                     />
                                 </div>

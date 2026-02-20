@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { X, ZoomIn } from "lucide-react";
 
 interface GalleryProps {
@@ -25,10 +26,12 @@ export default function Gallery({ images }: GalleryProps) {
                         onClick={() => setSelectedImage(src)}
                         className="group relative cursor-pointer overflow-hidden rounded-[20px] bg-warm-alabaster aspect-[4/3] shadow-sm hover:shadow-glow-gold transition-all duration-500 border border-primary-bronze/10"
                     >
-                        <img
+                        <Image
                             src={src}
-                            alt="Clínica Vivian Sanches"
-                            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            alt={`Galeria clinica ${i + 1} `}
+                            width={400}
+                            height={300}
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
 
                         {/* Overlay */}

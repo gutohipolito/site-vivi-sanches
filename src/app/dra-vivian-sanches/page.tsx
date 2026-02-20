@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 import { Award, Heart, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function DraVivian() {
     return (
@@ -31,9 +32,11 @@ export default function DraVivian() {
 
                     <div className="relative flex justify-center lg:justify-end">
                         <div className="absolute inset-0 bg-gradient-premium rounded-full blur-[100px] opacity-20 transform translate-x-10 translate-y-10"></div>
-                        <img
+                        <Image
                             src="/images/clinica/dravivian.png"
                             alt="Dra. Vivian Sanches"
+                            width={500}
+                            height={600}
                             className="relative z-10 w-full max-w-md drop-shadow-2xl animate-in fade-in slide-in-from-bottom duration-1000 rounded-3xl"
                         />
                     </div>

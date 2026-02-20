@@ -2,6 +2,7 @@ import Gallery from "@/components/Gallery";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Scale, Activity, Camera, Heart, Lightbulb, ShieldCheck, Users, Smartphone, Clock, Utensils, MessageCircle, Sparkles, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function Clinica() {
     const galleryImages = [
@@ -40,9 +41,11 @@ export default function Clinica() {
                     {/* Team Image - Attached by User */}
                     <div className="relative">
                         <div className="absolute inset-0 bg-gradient-premium rounded-full blur-[100px] opacity-20"></div>
-                        <img
+                        <Image
                             src="/images/clinica/team-header.png"
                             alt="Equipe Clínica Vivian Sanches"
+                            width={600}
+                            height={400}
                             className="relative z-10 w-full max-w-lg mx-auto drop-shadow-2xl animate-in fade-in slide-in-from-bottom duration-1000"
                         />
                     </div>
