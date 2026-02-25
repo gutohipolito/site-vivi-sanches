@@ -38,9 +38,9 @@
   @apply w-full h-[1px] bg-primary-bronze/10 my-16;
 }
 
-/* Base Styles */
+html,
 body {
-  @apply font-sans antialiased text-deep-charcoal bg-white relative isolate;
+  @apply font-sans antialiased text-deep-charcoal bg-white relative isolate overflow-x-hidden max-w-full;
 }
 
 body::before {

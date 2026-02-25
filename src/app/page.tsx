@@ -36,7 +36,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen selection:bg-accent-gold selection:text-white relative">
+    <main className="min-h-screen selection:bg-accent-gold selection:text-white relative overflow-x-hidden">
       <Navbar />
 
       <div className="relative">
