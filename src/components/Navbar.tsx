@@ -36,28 +36,39 @@ export default function Navbar() {
                     {/* Desktop Menu */}
                     <div className="hidden lg:flex gap-10">
                         {navLinks.map((link: NavLinkItem) => {
-                            const isActive = pathname === link.href;
-
-                            if (link.onClick) {
-                                return (
-                                    <button
-                                        key={link.name}
-                                        onClick={link.onClick}
-                                        className={`text-[10px] uppercase tracking-[0.2em] font-bold transition-all hover:text-accent-gold ${isActive ? 'text-primary-bronze' : 'text-deep-charcoal/80 hover:text-primary-bronze'}`}
-                                    >
-                                        {link.name}
-                                    </button>
-                                );
-                            }
+                            const isActive = pathname === link.href || (link.children?.some(child => pathname === child.href));
+                            const hasChildren = link.children && link.children.length > 0;
 
                             return (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    className={`text-[10px] uppercase tracking-[0.2em] font-bold transition-all hover:text-accent-gold ${isActive ? 'text-primary-bronze' : 'text-deep-charcoal/80 hover:text-primary-bronze'}`}
-                                >
-                                    {link.name}
-                                </Link>
+                                <div key={link.name} className="relative group/nav py-2">
+                                    <div className="flex items-center gap-1">
+                                        <Link
+                                            href={link.href}
+                                            className={`text-[10px] uppercase tracking-[0.2em] font-bold transition-all hover:text-accent-gold ${isActive ? 'text-primary-bronze' : 'text-deep-charcoal/80 hover:text-primary-bronze'}`}
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    </div>
+
+                                    {/* Premium Dropdown */}
+                                    {hasChildren && (
+                                        <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-300 transform group-hover/nav:translate-y-0 translate-y-2">
+                                            <div className="bg-white/90 backdrop-blur-2xl border border-primary-bronze/10 rounded-2xl p-4 min-w-[200px] shadow-2xl shadow-primary-bronze/5">
+                                                <div className="space-y-2">
+                                                    {link.children?.map((child) => (
+                                                        <Link
+                                                            key={child.name}
+                                                            href={child.href}
+                                                            className={`block text-[10px] uppercase tracking-widest font-bold p-3 rounded-xl transition-all ${pathname === child.href ? 'bg-primary-bronze/10 text-primary-bronze' : 'text-deep-charcoal/60 hover:text-primary-bronze hover:bg-warm-alabaster'}`}
+                                                        >
+                                                            {child.name}
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
                             );
                         })}
                     </div>
@@ -88,35 +99,37 @@ export default function Navbar() {
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 exit={{ opacity: 0, y: -20, scale: 0.95 }}
                                 transition={{ duration: 0.2 }}
-                                className="absolute top-full left-0 right-0 mt-4 bg-white/95 backdrop-blur-xl rounded-[2rem] shadow-2xl shadow-primary-bronze/10 border border-white/50 p-6 flex flex-col gap-4 lg:hidden overflow-hidden"
+                                className="absolute top-full left-0 right-0 mt-4 bg-white/95 backdrop-blur-xl rounded-[2rem] shadow-2xl shadow-primary-bronze/10 border border-white/50 p-6 flex flex-col gap-2 lg:hidden overflow-hidden"
                             >
                                 {navLinks.map((link: NavLinkItem) => {
-                                    const isActive = pathname === link.href;
-
-                                    if (link.onClick) {
-                                        return (
-                                            <button
-                                                key={link.name}
-                                                onClick={() => {
-                                                    if (link.onClick) link.onClick();
-                                                    setIsOpen(false);
-                                                }}
-                                                className={`w-full text-left text-sm uppercase tracking-[0.2em] font-bold p-4 rounded-xl transition-all ${isActive ? 'bg-primary-bronze/10 text-primary-bronze' : 'text-deep-charcoal/80 hover:bg-warm-alabaster'}`}
-                                            >
-                                                {link.name}
-                                            </button>
-                                        );
-                                    }
+                                    const isActive = pathname === link.href || (link.children?.some(child => pathname === child.href));
+                                    const hasChildren = link.children && link.children.length > 0;
 
                                     return (
-                                        <Link
-                                            key={link.name}
-                                            href={link.href}
-                                            onClick={() => setIsOpen(false)}
-                                            className={`text-sm uppercase tracking-[0.2em] font-bold p-4 rounded-xl transition-all ${isActive ? 'bg-primary-bronze/10 text-primary-bronze' : 'text-deep-charcoal/80 hover:bg-warm-alabaster'}`}
-                                        >
-                                            {link.name}
-                                        </Link>
+                                        <div key={link.name} className="space-y-1">
+                                            <Link
+                                                href={link.href}
+                                                onClick={() => setIsOpen(false)}
+                                                className={`flex items-center justify-between text-sm uppercase tracking-[0.2em] font-bold p-4 rounded-xl transition-all ${isActive ? 'bg-primary-bronze/10 text-primary-bronze' : 'text-deep-charcoal/80 hover:bg-warm-alabaster'}`}
+                                            >
+                                                {link.name}
+                                            </Link>
+
+                                            {hasChildren && (
+                                                <div className="pl-4 space-y-1">
+                                                    {link.children?.map((child) => (
+                                                        <Link
+                                                            key={child.name}
+                                                            href={child.href}
+                                                            onClick={() => setIsOpen(false)}
+                                                            className={`block text-xs uppercase tracking-[0.2em] font-bold p-4 rounded-xl transition-all ${pathname === child.href ? 'text-primary-bronze bg-primary-bronze/5' : 'text-deep-charcoal/50 hover:bg-warm-alabaster'}`}
+                                                        >
+                                                            • {child.name}
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
                                     );
                                 })}
 
