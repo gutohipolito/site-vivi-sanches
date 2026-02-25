@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bodoni_Moda, Inter } from "next/font/google";
 import NextImage from "next/image";
 import "./globals.css";
+import CookieConsent from "@/components/CookieConsent";
 
 const bodoni = Bodoni_Moda({
   variable: "--font-serif",
@@ -26,10 +27,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
+      <head>
+        {/* Google Tag Manager / Analytics Placeholders */}
+        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> */}
+        {/* <script dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');` }} /> */}
+      </head>
       <body
         className={`${bodoni.variable} ${inter.variable} antialiased`}
       >
         {children}
+        <CookieConsent />
 
         {/* Floating CTA (Global Avatar) */}
         <a

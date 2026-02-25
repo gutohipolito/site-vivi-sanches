@@ -128,7 +128,7 @@ export default function Footer() {
                             <Link href="/termos-de-uso" className="hover:text-accent-gold transition-colors">Termos de Uso</Link>
                         </div>
                         <p className="text-[10px] uppercase tracking-widest text-warm-alabaster/20 font-bold">
-                            © 2026 Clínica Sanches. CNPJ: 28.559.176/0001-05
+                            © 2026 Clínica Sanches. CNPJ: 28.559.176/0001-05 | CRN 3 30798
                         </p>
                     </div>
 

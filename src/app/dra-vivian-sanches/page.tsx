@@ -21,6 +21,9 @@ export default function DraVivian() {
                             <h1 className="text-5xl md:text-7xl font-serif text-deep-charcoal leading-none tracking-tight">
                                 Dra. Vivian Sanches
                             </h1>
+                            <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-deep-charcoal/40">
+                                CRN 3 30798
+                            </span>
                         </div>
 
                         <div className="w-24 h-px bg-primary-bronze/30"></div>
