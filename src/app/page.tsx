@@ -107,10 +107,10 @@ export default function Home() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.8 }}
-                  className="absolute bottom-6 right-6 md:bottom-12 md:right-12 p-6 md:p-10 backdrop-blur-2xl bg-white/10 border border-white/20 rounded-[2rem] md:rounded-[3rem] max-w-sm shadow-2xl"
+                  className="absolute bottom-4 right-4 md:bottom-12 md:right-12 p-5 md:p-10 backdrop-blur-2xl bg-white/10 border border-white/20 rounded-[2rem] md:rounded-[3rem] max-w-[85%] md:max-w-sm shadow-2xl"
                 >
-                  <h3 className="text-2xl md:text-3xl font-serif text-white mb-4">Estrutura Premium</h3>
-                  <p className="text-sm md:text-base text-white/80 font-light leading-relaxed">
+                  <h3 className="text-xl md:text-3xl font-serif text-white mb-2 md:mb-4">Estrutura Premium</h3>
+                  <p className="text-xs md:text-base text-white/80 font-light leading-relaxed">
                     Equipamentos de última geração em um ambiente projetado para o seu conforto e privacidade.
                   </p>
                 </motion.div>
@@ -160,7 +160,7 @@ export default function Home() {
         </section>
 
         {/* Premium Services Showcase */}
-        <section className="relative min-h-[800px] flex items-center bg-deep-charcoal overflow-hidden group/session">
+        <section className="relative min-h-[600px] md:min-h-[800px] flex items-center bg-deep-charcoal overflow-hidden group/session">
           {/* Background Atmospheric Layer */}
           <div className="absolute inset-0 z-0 text-white">
             <AnimatePresence mode="wait">
@@ -199,7 +199,7 @@ export default function Home() {
             </AnimatePresence>
           </div>
 
-          <div className="max-w-7xl mx-auto px-6 md:px-10 w-full relative z-10 py-32">
+          <div className="max-w-7xl mx-auto px-6 md:px-10 w-full relative z-10 py-16 md:py-32">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center text-white">
               <div className="space-y-12">
                 <div className="space-y-6">
