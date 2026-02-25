@@ -16,7 +16,7 @@ export default function Footer() {
             <AppModal isOpen={isAppModalOpen} onClose={() => setIsAppModalOpen(false)} />
 
             {/* Organic Watermarks - Distinct & Large */}
-            <div className="absolute bottom-[-10%] right-[-5%] pointer-events-none transform rotate-12 z-0">
+            <div className="absolute bottom-[5%] right-[-5%] pointer-events-none transform rotate-12 z-0">
                 <Image
                     src="/images/patterns/vivisanches-overlay.png"
                     alt=""
@@ -26,8 +26,8 @@ export default function Footer() {
                 />
             </div>
 
-            <div className="max-w-7xl mx-auto space-y-20 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-20">
+            <div className="max-w-7xl mx-auto space-y-12 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12">
 
                     {/* Column 1: Brand */}
                     <div className="space-y-6">
@@ -121,9 +121,9 @@ export default function Footer() {
 
                 </div>
 
-                <div className="flex flex-col md:flex-row justify-between items-end gap-6 border-t border-white/5 pt-8">
-                    <div className="space-y-4 text-left">
-                        <div className="flex gap-6 text-[10px] uppercase tracking-widest font-bold text-warm-alabaster/40">
+                <div className="flex flex-col items-center justify-center gap-8 border-t border-white/5 pt-12 text-center">
+                    <div className="space-y-6">
+                        <div className="flex justify-center gap-8 text-[10px] uppercase tracking-widest font-bold text-warm-alabaster/40">
                             <Link href="/politica-de-privacidade" className="hover:text-accent-gold transition-colors">Política de Privacidade</Link>
                             <Link href="/termos-de-uso" className="hover:text-accent-gold transition-colors">Termos de Uso</Link>
                         </div>
@@ -132,8 +132,8 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <div className="flex items-center gap-2 text-[13px] font-normal text-[#f0f0f0]">
-                        <span>Desenvolvido por</span>
+                    <div className="flex items-center justify-center gap-3 text-[13px] font-normal text-[#f0f0f0]">
+                        <span className="opacity-40">Desenvolvido por</span>
                         <a
                             href="https://asthros.com.br/?utm_source=viviansanches.com.br&utm_medium=footer&utm_campaign=site-institucional"
                             target="_blank"
