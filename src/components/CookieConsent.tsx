@@ -34,7 +34,7 @@ export default function CookieConsent() {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: 100, opacity: 0 }}
                     transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                    className="fixed bottom-6 left-6 right-6 md:left-auto md:right-8 md:max-w-md z-[100]"
+                    className="fixed bottom-6 left-6 right-6 md:right-auto md:left-8 md:max-w-md z-[100]"
                 >
                     <div className="bg-white/80 backdrop-blur-3xl border border-primary-bronze/10 rounded-[2rem] p-8 shadow-2xl relative overflow-hidden group">
                         {/* Subtle background decoration */}

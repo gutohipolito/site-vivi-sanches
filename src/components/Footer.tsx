@@ -1,6 +1,6 @@
 "use client";
 
-import { Instagram, Phone, MapPin, Clock, Map, Navigation } from "lucide-react";
+import { Instagram, Facebook, Phone, MapPin, Clock, Map, Navigation } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -44,8 +44,11 @@ export default function Footer() {
                             Prezamos sempre por um atendimento profissional e qualificado, contando com equipamentos modernos e tecnologia de ponta para garantir diagnósticos precisos e estratégias eficazes.
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 flex items-center justify-center border border-white/10 hover:border-accent-gold hover:bg-accent-gold hover:text-white transition-all duration-500 rounded-full text-white">
+                            <a href="https://www.instagram.com/dra.vivisanches/" target="_blank" className="w-10 h-10 flex items-center justify-center border border-white/10 hover:border-accent-gold hover:bg-accent-gold hover:text-white transition-all duration-500 rounded-full text-white">
                                 <Instagram size={18} />
+                            </a>
+                            <a href="https://www.facebook.com/dra.vivisanches/" target="_blank" className="w-10 h-10 flex items-center justify-center border border-white/10 hover:border-accent-gold hover:bg-accent-gold hover:text-white transition-all duration-500 rounded-full text-white">
+                                <Facebook size={18} />
                             </a>
                         </div>
                     </div>
@@ -121,9 +124,9 @@ export default function Footer() {
 
                 </div>
 
-                <div className="flex flex-col items-center justify-center gap-8 border-t border-white/5 pt-12 text-center">
+                <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-8 border-t border-white/5 pt-12 text-center md:text-left">
                     <div className="space-y-6">
-                        <div className="flex justify-center gap-8 text-[10px] uppercase tracking-widest font-bold text-warm-alabaster/40">
+                        <div className="flex justify-center md:justify-start gap-8 text-[10px] uppercase tracking-widest font-bold text-warm-alabaster/40">
                             <Link href="/politica-de-privacidade" className="hover:text-accent-gold transition-colors">Política de Privacidade</Link>
                             <Link href="/termos-de-uso" className="hover:text-accent-gold transition-colors">Termos de Uso</Link>
                         </div>
@@ -132,7 +135,7 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <div className="flex items-center justify-center gap-3 text-[13px] font-normal text-[#f0f0f0]">
+                    <div className="flex items-center justify-center md:justify-end gap-3 text-[13px] font-normal text-[#f0f0f0]">
                         <span className="opacity-40">Desenvolvido por</span>
                         <a
                             href="https://asthros.com.br/?utm_source=viviansanches.com.br&utm_medium=footer&utm_campaign=site-institucional"
