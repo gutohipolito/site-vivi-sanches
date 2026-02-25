@@ -1,7 +1,7 @@
 import Gallery from "@/components/Gallery";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Scale, Activity, Camera, Heart, Lightbulb, ShieldCheck, Users, Smartphone, Clock, Utensils, MessageCircle, Sparkles, ArrowRight } from "lucide-react";
+import { Scale, Activity, Camera, Heart, Lightbulb, ShieldCheck, Smartphone, Clock, Utensils, MessageCircle, Sparkles, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import TeamSection from "@/components/TeamSection";
 

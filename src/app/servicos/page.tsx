@@ -3,7 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import { Scale, Smartphone, Clock, Utensils, MessageCircle, Sparkles, ArrowRight, Activity, Beaker, Zap } from "lucide-react";
+import { Scale, Smartphone, Clock, Utensils, MessageCircle, Sparkles, ArrowRight, Activity, Zap } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 

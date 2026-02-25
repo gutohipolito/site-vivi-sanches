@@ -124,7 +124,7 @@ export default async function ProfessionalPage({ params }: { params: Promise<{ s
                             <Microscope size={20} />
                         </div>
                         <p className="text-2xl md:text-3xl font-serif text-deep-charcoal leading-snug">
-                            "Acredita que resultados consistentes não dependem apenas de procedimentos, mas de <span className="text-primary-bronze">diagnóstico preciso</span>, planejamento estruturado e acompanhamento contínuo."
+                            &quot;Acredita que resultados consistentes não dependem apenas de procedimentos, mas de <span className="text-primary-bronze">diagnóstico preciso</span>, planejamento estruturado e acompanhamento contínuo.&quot;
                         </p>
                         <p className="text-lg text-deep-charcoal/50 font-sans max-w-2xl mx-auto">
                             Sua abordagem integra avaliação clínica aprofundada às intervenções cirúrgicas, promovendo uma visão global do paciente.
