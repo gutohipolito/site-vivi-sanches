@@ -91,7 +91,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-                className="col-span-12 lg:col-span-8 relative rounded-[2rem] md:rounded-[4rem] overflow-hidden aspect-[16/9] shadow-2xl shadow-primary-bronze/10 group"
+                className="col-span-12 lg:col-span-8 relative rounded-[2rem] md:rounded-[4rem] overflow-hidden aspect-[4/5] md:aspect-[16/9] shadow-2xl shadow-primary-bronze/10 group"
               >
                 <Image
                   src="/images/clinica/fotoclinica1.png"
@@ -99,18 +99,18 @@ export default function Home() {
                   fill
                   className="object-cover transform group-hover:scale-110 transition-transform duration-[3s] ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-deep-charcoal/60 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-deep-charcoal/80 via-transparent to-transparent"></div>
 
-                {/* Radical Glassmorphism Card */}
+                {/* Radical Glassmorphism Card - Refined Mobile Docking */}
                 <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.8 }}
-                  className="absolute bottom-4 right-4 md:bottom-12 md:right-12 p-5 md:p-10 backdrop-blur-2xl bg-white/10 border border-white/20 rounded-[2rem] md:rounded-[3rem] max-w-[85%] md:max-w-sm shadow-2xl"
+                  className="absolute bottom-0 left-0 right-0 md:bottom-12 md:right-12 p-8 md:p-10 backdrop-blur-2xl bg-white/10 border-t md:border border-white/20 rounded-t-[2.5rem] md:rounded-[3rem] max-w-full md:max-w-sm shadow-2xl"
                 >
-                  <h3 className="text-xl md:text-3xl font-serif text-white mb-2 md:mb-4">Estrutura Premium</h3>
-                  <p className="text-xs md:text-base text-white/80 font-light leading-relaxed">
+                  <h3 className="text-2xl md:text-3xl font-serif text-white mb-3 md:mb-4">Estrutura Premium</h3>
+                  <p className="text-sm md:text-base text-white/80 font-light leading-relaxed">
                     Equipamentos de última geração em um ambiente projetado para o seu conforto e privacidade.
                   </p>
                 </motion.div>
