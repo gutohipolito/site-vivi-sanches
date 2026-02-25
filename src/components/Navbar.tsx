@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MessageCircle, Menu, X } from "lucide-react";
+import { MessageCircle, Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { navLinks, NavLinkItem } from "@/constants/navigation";
 
@@ -22,15 +22,19 @@ export default function Navbar() {
                     animate={{ y: 0 }}
                     className="w-full max-w-7xl bg-white/60 backdrop-blur-2xl px-6 py-4 lg:px-8 lg:py-4 flex justify-between items-center shadow-glow-gold pointer-events-auto rounded-[2rem] lg:rounded-full transition-all duration-500 hover:bg-white/70 hover:shadow-accent-gold/30 border border-white/40 relative"
                 >
-                    <Link href="/" className="flex items-center group pl-2">
-                        <Image
-                            src="/images/clinica/logo-clinica-sanches-v2.png"
-                            alt="Clínica Sanches"
-                            width={180}
-                            height={45}
-                            className="h-9 lg:h-11 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
-                            priority
-                        />
+                    <Link href="/" className="flex items-center group pl-2 relative overflow-hidden rounded-lg">
+                        <div className="relative">
+                            <Image
+                                src="/images/clinica/logo-clinica-sanches-v2.png"
+                                alt="Clínica Sanches"
+                                width={160}
+                                height={40}
+                                className="h-7 lg:h-9 w-auto object-contain transition-all duration-500"
+                                priority
+                            />
+                            {/* Shimmer Effect */}
+                            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-shimmer pointer-events-none"></div>
+                        </div>
                     </Link>
 
                     {/* Desktop Menu */}
@@ -41,13 +45,16 @@ export default function Navbar() {
 
                             return (
                                 <div key={link.name} className="relative group/nav py-2">
-                                    <div className="flex items-center gap-1">
+                                    <div className="flex items-center gap-1 cursor-pointer">
                                         <Link
                                             href={link.href}
                                             className={`text-[10px] uppercase tracking-[0.2em] font-bold transition-all hover:text-accent-gold ${isActive ? 'text-primary-bronze' : 'text-deep-charcoal/80 hover:text-primary-bronze'}`}
                                         >
                                             {link.name}
                                         </Link>
+                                        {hasChildren && (
+                                            <ChevronDown size={10} className={`transition-transform duration-300 group-hover/nav:rotate-180 ${isActive ? 'text-primary-bronze' : 'text-deep-charcoal/40'}`} />
+                                        )}
                                     </div>
 
                                     {/* Premium Dropdown */}
