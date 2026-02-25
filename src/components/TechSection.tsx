@@ -48,7 +48,7 @@ export default function TechSection() {
                         <div className="w-full h-full border-[0.5px] border-primary-bronze/20 absolute inset-10"></div>
                         <div className="relative z-10 text-center space-y-4">
                             <div className="text-[8px] uppercase tracking-[1em] font-black text-primary-bronze/30">Interface Digital</div>
-                            <div className="font-serif text-3xl text-primary-bronze/60 italic">VIVIAN SANCHES APP</div>
+                            <div className="font-serif text-3xl text-primary-bronze/60 italic">CLÍNICA SANCHES APP</div>
                         </div>
                     </motion.div>
                 </div>

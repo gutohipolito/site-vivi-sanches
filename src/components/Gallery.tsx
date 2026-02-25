@@ -31,6 +31,8 @@ export default function Gallery({ images }: GalleryProps) {
                             alt={`Galeria clinica ${i + 1} `}
                             width={400}
                             height={300}
+                            quality={70}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
 
@@ -64,7 +66,7 @@ export default function Gallery({ images }: GalleryProps) {
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.9, opacity: 0 }}
                             src={selectedImage}
-                            alt="Clínica Vivian Sanches - Full View"
+                            alt="Clínica Sanches - Full View"
                             className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl cursor-default"
                             onClick={(e) => e.stopPropagation()} // Prevent close on image click
                         />

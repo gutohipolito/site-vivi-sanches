@@ -105,7 +105,7 @@ export default function AppModal({ isOpen, onClose }: AppModalProps) {
                                 <div className="absolute inset-0 bg-gradient-to-t from-deep-charcoal via-transparent to-transparent z-10 md:bg-gradient-to-l opacity-80" />
                                 <Image
                                     src="/images/clinica/clinica_interior_luxury_1771467230428.png"
-                                    alt="App Exclusivo Vivian Sanches"
+                                    alt="App Exclusivo Clínica Sanches"
                                     fill
                                     className="object-cover opacity-80 md:opacity-100"
                                 />

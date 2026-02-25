@@ -3,6 +3,7 @@
 import { Instagram, Phone, MapPin, Clock, Map, Navigation } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 
 const AppModal = dynamic(() => import("./AppModal"), { ssr: false });
@@ -30,16 +31,17 @@ export default function Footer() {
 
                     {/* Column 1: Brand */}
                     <div className="space-y-6">
-                        <div className="space-y-2">
-                            <h3 className="text-2xl font-serif text-white tracking-wide">
-                                VIVIAN SANCHES
-                            </h3>
-                            <p className="text-[10px] uppercase tracking-widest text-primary-bronze font-bold">
-                                Clínica de Nutrição
-                            </p>
+                        <div className="space-y-4">
+                            <Image
+                                src="/images/clinica/logo-clinica-sanches-v2.png"
+                                alt="Clínica Sanches"
+                                width={200}
+                                height={50}
+                                className="h-10 w-auto object-contain brightness-0 invert"
+                            />
                         </div>
                         <p className="text-sm text-warm-alabaster/60 font-sans leading-relaxed">
-                            Excelência em nutrição clínica, esportiva e estética. Tecnologia e ciência a favor da sua melhor performance.
+                            Prezamos sempre por um atendimento profissional e qualificado, contando com equipamentos modernos e tecnologia de ponta para garantir diagnósticos precisos e estratégias eficazes.
                         </p>
                         <div className="flex gap-4">
                             <a href="#" className="w-10 h-10 flex items-center justify-center border border-white/10 hover:border-accent-gold hover:bg-accent-gold hover:text-white transition-all duration-500 rounded-full text-white">
@@ -52,8 +54,10 @@ export default function Footer() {
                     <div className="space-y-6">
                         <h4 className="text-sm font-serif font-bold text-white tracking-wide border-b border-primary-bronze pb-4 inline-block">Navegação</h4>
                         <ul className="space-y-4 text-xs uppercase tracking-widest font-bold text-warm-alabaster/50">
-                            <li><a href="/clinica" className="hover:text-accent-gold transition-colors">A Clínica</a></li>
-                            <li><a href="/servicos" className="hover:text-accent-gold transition-colors">Especialidades</a></li>
+                            <li><Link href="/clinica" className="hover:text-accent-gold transition-colors">A Clínica</Link></li>
+                            <li><Link href="/servicos" className="hover:text-accent-gold transition-colors">Especialidades</Link></li>
+                            <li><Link href="/dicas-de-saude" className="hover:text-accent-gold transition-colors">Dicas de Saúde</Link></li>
+                            <li><Link href="/contato" className="hover:text-accent-gold transition-colors">Contato</Link></li>
                             <li>
                                 <button
                                     onClick={() => setIsAppModalOpen(true)}
@@ -62,7 +66,6 @@ export default function Footer() {
                                     App Exclusivo
                                 </button>
                             </li>
-                            <li><a href="/dra-vivian-sanches" className="hover:text-accent-gold transition-colors">Corpo Clínico</a></li>
                         </ul>
                     </div>
 
@@ -121,11 +124,11 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-end gap-6 border-t border-white/5 pt-8">
                     <div className="space-y-4 text-left">
                         <div className="flex gap-6 text-[10px] uppercase tracking-widest font-bold text-warm-alabaster/40">
-                            <a href="/politica-de-privacidade" className="hover:text-accent-gold transition-colors">Política de Privacidade</a>
-                            <a href="/termos-de-uso" className="hover:text-accent-gold transition-colors">Termos de Uso</a>
+                            <Link href="/politica-de-privacidade" className="hover:text-accent-gold transition-colors">Política de Privacidade</Link>
+                            <Link href="/termos-de-uso" className="hover:text-accent-gold transition-colors">Termos de Uso</Link>
                         </div>
                         <p className="text-[10px] uppercase tracking-widest text-warm-alabaster/20 font-bold">
-                            © 2026 Clínica Vivian Sanches. CNPJ: 28.559.176/0001-05
+                            © 2026 Clínica Sanches. CNPJ: 28.559.176/0001-05
                         </p>
                     </div>
 
@@ -137,12 +140,18 @@ export default function Footer() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center group"
                         >
-                            <Image
-                                src="https://framerusercontent.com/images/VsYx2QVW5Y8IxBrQWgMgeUXXhhA.png"
-                                alt="Asthros"
-                                width={80}
-                                height={15}
-                                className="h-[15px] w-auto brightness-0 invert opacity-80 group-hover:opacity-100 group-hover:drop-shadow-[0_0_8px_rgba(180,255,0,0.6)] transition-all duration-500"
+                            <div
+                                className="h-[15px] w-[80px] bg-white/80 group-hover:bg-[#dbfb36] group-hover:drop-shadow-[0_0_8px_#dbfb36] transition-all duration-500"
+                                style={{
+                                    maskImage: 'url(https://framerusercontent.com/images/VsYx2QVW5Y8IxBrQWgMgeUXXhhA.png)',
+                                    WebkitMaskImage: 'url(https://framerusercontent.com/images/VsYx2QVW5Y8IxBrQWgMgeUXXhhA.png)',
+                                    maskSize: 'contain',
+                                    WebkitMaskSize: 'contain',
+                                    maskRepeat: 'no-repeat',
+                                    WebkitMaskRepeat: 'no-repeat',
+                                    maskPosition: 'center',
+                                    WebkitMaskPosition: 'center'
+                                }}
                             />
                         </a>
                     </div>

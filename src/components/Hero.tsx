@@ -29,7 +29,7 @@ export default function Hero() {
                     </p>
                     <div className="flex gap-6 items-center justify-center lg:justify-start">
                         <a href="/servicos" className="bg-gradient-premium text-white px-8 py-4 uppercase text-[10px] font-bold tracking-[0.3em] hover:shadow-glow-gold hover:-translate-y-1 transition-all duration-500 rounded-full shadow-xl shadow-primary-bronze/20">
-                            Ver Protocolos
+                            Ver Especialidades
                         </a>
                         <a href="https://wa.me/5511940057497" className="text-[10px] uppercase tracking-[0.4em] font-black text-deep-charcoal hover:text-accent-gold transition-colors border-b border-transparent hover:border-accent-gold pb-1">
                             Agendar
@@ -51,7 +51,8 @@ export default function Hero() {
                     width={800}
                     height={1000}
                     priority
-                    quality={90}
+                    quality={85}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="w-[130%] max-w-none md:w-full lg:scale-[1.45] lg:origin-bottom-right drop-shadow-none opacity-90 object-contain"
                 />
             </motion.div>

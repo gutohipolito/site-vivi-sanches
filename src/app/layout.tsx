@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Clínica Vivian Sanches | Nutrição de Alta Performance",
+  title: "Clínica Sanches - Nutrição, saúde e Estética.",
   description: "Clínica especializada em nutrição estratégica, emagrecimento e performance com base científica.",
 };
 
@@ -43,10 +43,12 @@ export default function RootLayout({
           {/* Avatar Container */}
           <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full border-4 border-white shadow-2xl shadow-black/20 overflow-hidden transform group-hover:scale-110 transition-transform duration-500">
             <NextImage
-              src="/images/clinica/img-contato-vivi-sanches.png"
+              src="/images/clinica/capa-hero-vivi-sanches.png"
               alt="Fale Conosco"
               width={80}
               height={80}
+              quality={60}
+              sizes="80px"
               className="w-full h-full object-cover"
             />
           </div>

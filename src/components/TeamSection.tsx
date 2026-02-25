@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { User } from "lucide-react";
 
-const team = [
-    { name: "Dr. Lucas Soares", role: "Clínica & Performance" },
-    { name: "Dra. Vivian Sanches", role: "Nutrição Estratégica" }
-];
+import { TEAM_MEMBERS } from "@/constants/team";
 
 export default function TeamSection() {
     return (
@@ -22,25 +22,43 @@ export default function TeamSection() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-primary-bronze/10 border border-primary-bronze/10">
-                    {team.map((member, i) => (
-                        <motion.div
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-primary-bronze/10 border border-primary-bronze/10">
+                    {TEAM_MEMBERS.map((member, i) => (
+                        <Link
                             key={i}
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: i * 0.1 }}
-                            className="group p-20 bg-white hover:bg-warm-alabaster transition-colors duration-700 space-y-12"
+                            href={member.slug === "vivian-sanches" ? "/dra-vivian-sanches" : `/equipe/${member.slug}`}
                         >
-                            <div className="space-y-4">
-                                <h4 className="text-3xl font-serif text-deep-charcoal">{member.name}</h4>
-                                <div className="text-[10px] uppercase tracking-[0.4em] font-black text-primary-bronze">{member.role}</div>
-                            </div>
-                            <div className="w-12 h-px bg-primary-bronze/20 group-hover:w-full transition-all duration-1000"></div>
-                            <p className="text-xs uppercase tracking-[0.2em] font-bold text-deep-charcoal/30">
-                                Especialista em Nutrição de Precisão
-                            </p>
-                        </motion.div>
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1 }}
+                                className="group p-12 bg-white hover:bg-warm-alabaster transition-colors duration-700 space-y-8 h-full flex flex-col"
+                            >
+                                <div className="aspect-[3/4] relative overflow-hidden rounded-2xl bg-warm-alabaster border border-primary-bronze/5">
+                                    {member.image.includes("placeholder") ? (
+                                        <div className="absolute inset-0 flex items-center justify-center text-primary-bronze/20">
+                                            <User size={64} strokeWidth={1} />
+                                        </div>
+                                    ) : (
+                                        <Image
+                                            src={member.image}
+                                            alt={member.name}
+                                            fill
+                                            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                                        />
+                                    )}
+                                </div>
+                                <div className="space-y-4 flex-grow">
+                                    <h4 className="text-2xl font-serif text-deep-charcoal leading-tight">{member.name}</h4>
+                                    <div className="text-[10px] uppercase tracking-[0.4em] font-black text-primary-bronze line-clamp-2">{member.role}</div>
+                                </div>
+                                <div className="w-12 h-px bg-primary-bronze/20 group-hover:w-full transition-all duration-1000"></div>
+                                <p className="text-[9px] uppercase tracking-[0.2em] font-bold text-deep-charcoal/30">
+                                    {member.description}
+                                </p>
+                            </motion.div>
+                        </Link>
                     ))}
                 </div>
             </div>

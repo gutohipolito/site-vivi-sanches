@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MessageCircle, Menu, X } from "lucide-react";
+import Image from "next/image";
 import { navLinks, NavLinkItem } from "@/constants/navigation";
 
 export default function Navbar() {
@@ -21,13 +22,15 @@ export default function Navbar() {
                     animate={{ y: 0 }}
                     className="w-full max-w-7xl bg-white/60 backdrop-blur-2xl px-6 py-4 lg:px-8 lg:py-4 flex justify-between items-center shadow-glow-gold pointer-events-auto rounded-[2rem] lg:rounded-full transition-all duration-500 hover:bg-white/70 hover:shadow-accent-gold/30 border border-white/40 relative"
                 >
-                    <Link href="/" className="flex flex-col group pl-2">
-                        <span className="text-lg lg:text-xl font-serif tracking-tight text-deep-charcoal font-bold leading-none group-hover:text-primary-bronze transition-colors duration-500">
-                            DRA. VIVIAN SANCHES
-                        </span>
-                        <span className="text-[8px] lg:text-[9px] uppercase tracking-[0.3em] text-primary-bronze font-bold mt-1.5 opacity-80 pl-0.5">
-                            Nutrição Estratégica
-                        </span>
+                    <Link href="/" className="flex items-center group pl-2">
+                        <Image
+                            src="/images/clinica/logo-clinica-sanches-v2.png"
+                            alt="Clínica Sanches"
+                            width={180}
+                            height={45}
+                            className="h-9 lg:h-11 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                            priority
+                        />
                     </Link>
 
                     {/* Desktop Menu */}

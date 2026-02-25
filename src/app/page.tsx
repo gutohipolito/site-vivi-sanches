@@ -1,11 +1,40 @@
+"use client";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 
 export default function Home() {
+  const [activeService, setActiveService] = useState(0);
+
+  const services = [
+    {
+      title: "Nutrição Clínica",
+      slug: "clinica",
+      description: "Equilíbrio bioquímico e restauração da saúde através da nutrição funcional.",
+      image: "/images/clinica/protocol_metabolic.png",
+      bgText: "PRECISÃO"
+    },
+    {
+      title: "Performance Esportiva",
+      slug: "performance",
+      description: "Maximização de resultados e otimização metabólica para atletas e entusiastas.",
+      image: "/images/clinica/protocol_performance.png",
+      bgText: "POTÊNCIA"
+    },
+    {
+      title: "Estética Avançada",
+      slug: "estetica",
+      description: "Protocolos integrados para beleza real fundamentada em saúde celular.",
+      image: "/images/clinica/protocol_aesthetic.png",
+      bgText: "ESSÊNCIA"
+    }
+  ];
+
   return (
     <main className="min-h-screen selection:bg-accent-gold selection:text-white relative">
       <Navbar />
@@ -13,95 +42,263 @@ export default function Home() {
       <div className="relative">
         <Hero />
 
-        {/* A Clínica Section (Expanded) */}
-        <section className="py-32 px-6 md:px-10 max-w-7xl mx-auto border-t border-primary-bronze/10">
-          <div className="space-y-20">
-            {/* 1. Intro & Mission */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <div className="space-y-6">
-                <h2 className="text-[10px] uppercase tracking-[0.6em] font-black text-primary-bronze">Consultoria Nutricional</h2>
-                <h3 className="text-4xl md:text-5xl font-serif text-deep-charcoal leading-tight">
-                  A Clínica Vivian Sanches
-                </h3>
+        {/* Premium A Clínica Section */}
+        <section className="relative py-24 md:py-48 overflow-hidden">
+          {/* Decorative background elements */}
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-bronze/20 to-transparent"></div>
+
+          <div className="max-w-7xl mx-auto px-6 md:px-10">
+            <div className="relative z-20 mb-24 md:mb-32">
+              <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+                <div className="space-y-6 max-w-2xl">
+                  <motion.span
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-[10px] uppercase tracking-[0.8em] font-black text-primary-bronze block"
+                  >
+                    Exclusividade & Ciência
+                  </motion.span>
+                  <motion.h2
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1, duration: 0.8 }}
+                    className="text-5xl md:text-7xl lg:text-8xl font-serif text-deep-charcoal leading-[0.85] tracking-tighter"
+                  >
+                    Clínica <br />
+                    <span className="italic font-light opacity-60 ml-4 lg:ml-12">Sanches</span>
+                  </motion.h2>
+                </div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 }}
+                  className="lg:max-w-md"
+                >
+                  <p className="text-xl md:text-2xl text-deep-charcoal/70 font-sans font-light leading-relaxed">
+                    A convergência entre a <span className="text-primary-bronze font-normal">bioquímica avançada</span> e o acolhimento humano. Restauramos o equilíbrio para que sua melhor versão emerja.
+                  </p>
+                </motion.div>
               </div>
-              <p className="text-lg text-deep-charcoal/60 leading-relaxed font-sans font-light">
-                Visa detectar e restabelecer possíveis desajustes nutricionais que, quando afetam o indivíduo, promovem desequilíbrios bioquímicos alterando o bom funcionamento do organismo.
-              </p>
             </div>
 
-            {/* 2. Visual Feature: Estrutura */}
-            <div className="relative rounded-[3rem] overflow-hidden shadow-2xl shadow-primary-bronze/10 group">
-              <div className="absolute inset-0 bg-deep-charcoal/20 group-hover:bg-deep-charcoal/10 transition-colors duration-700 z-10"></div>
-              <Image
-                src="/images/clinica/clinica_interior_luxury_1771467230428.png"
-                alt="Estrutura da Clínica Vivian Sanches"
-                fill
-                className="object-cover transform group-hover:scale-105 transition-transform duration-[2s]"
-              />
-              <div className="absolute inset-0 flex items-center justify-center z-20 p-10 text-center">
-                <h3 className="text-4xl md:text-6xl font-serif text-white leading-tight drop-shadow-lg max-w-4xl">
-                  &quot;Estrutura completa para um atendimento de excelência.&quot;
-                </h3>
-              </div>
-            </div>
+            {/* Cinematic Structure Reveal */}
+            <div className="grid grid-cols-12 gap-4 md:gap-8 items-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+                className="col-span-12 lg:col-span-8 relative rounded-[2rem] md:rounded-[4rem] overflow-hidden aspect-[16/9] shadow-2xl shadow-primary-bronze/10 group"
+              >
+                <Image
+                  src="/images/clinica/fotoclinica1.png"
+                  alt="Estrutura da Clínica Sanches"
+                  fill
+                  className="object-cover transform group-hover:scale-110 transition-transform duration-[3s] ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-deep-charcoal/60 via-transparent to-transparent"></div>
 
-            {/* 3. Features Grid: App & Parcerias */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
-              {/* App / Individualizado */}
-              <div className="space-y-6">
-                <div className="w-12 h-12 bg-accent-gold/10 rounded-full flex items-center justify-center text-accent-gold mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-                </div>
-                <h4 className="text-2xl font-serif text-deep-charcoal">Atendimento Individualizado</h4>
-                <p className="text-deep-charcoal/60 leading-relaxed font-light">
-                  Cada paciente recebe seu plano alimentar de acordo com suas necessidades e rotina diária por meio de um aplicativo exclusivo.
-                </p>
-                <ul className="space-y-3 text-sm text-deep-charcoal/70">
-                  <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-accent-gold"></span>Receitas fitness para planejamento</li>
-                  <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-accent-gold"></span>Alertas de horários e hidratação</li>
-                  <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-accent-gold"></span>Chat direto com a nutricionista</li>
-                </ul>
-              </div>
+                {/* Radical Glassmorphism Card */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.8 }}
+                  className="absolute bottom-6 right-6 md:bottom-12 md:right-12 p-6 md:p-10 backdrop-blur-2xl bg-white/10 border border-white/20 rounded-[2rem] md:rounded-[3rem] max-w-sm shadow-2xl"
+                >
+                  <h3 className="text-2xl md:text-3xl font-serif text-white mb-4">Estrutura Premium</h3>
+                  <p className="text-sm md:text-base text-white/80 font-light leading-relaxed">
+                    Equipamentos de última geração em um ambiente projetado para o seu conforto e privacidade.
+                  </p>
+                </motion.div>
+              </motion.div>
 
-              {/* Parcerias */}
-              <div className="space-y-6">
-                <div className="w-12 h-12 bg-primary-bronze/10 rounded-full flex items-center justify-center text-primary-bronze mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                </div>
-                <h4 className="text-2xl font-serif text-deep-charcoal">Rede de Parcerias</h4>
-                <p className="text-deep-charcoal/60 leading-relaxed font-light">
-                  Oferecemos descontos em diversos serviços e consultas através de nossa rede de parceiros selecionados.
-                </p>
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {["Personal Trainers", "Endocrinologistas", "Estética", "Salão de Beleza", "Ginecologista", "Laboratórios"].map((p, i) => (
-                    <span key={i} className="px-4 py-2 bg-warm-alabaster border border-deep-charcoal/5 rounded-full text-xs uppercase tracking-wider text-deep-charcoal/60">
-                      {p}
-                    </span>
-                  ))}
-                </div>
+              <div className="col-span-12 lg:col-span-4 space-y-8 md:space-y-12 lg:pl-8">
+                {/* Apps & Individualization - Redesigned */}
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="p-8 bg-warm-alabaster rounded-[2rem] border border-primary-bronze/5 relative overflow-hidden group"
+                >
+                  <div className="absolute -top-12 -right-12 w-32 h-32 bg-accent-gold/5 rounded-full blur-3xl group-hover:bg-accent-gold/10 transition-colors duration-700"></div>
+                  <div className="relative z-10 space-y-4">
+                    <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent-gold">Tecnologia Própria</span>
+                    <h4 className="text-2xl font-serif text-deep-charcoal">Acompanhamento 360º</h4>
+                    <p className="text-sm text-deep-charcoal/60 leading-relaxed font-light">
+                      Plano alimentar dinâmico via app exclusivo, com chat direto e monitoramento de metas em tempo real.
+                    </p>
+                  </div>
+                </motion.div>
+
+                {/* Network - Redesigned */}
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="p-8 border border-deep-charcoal/5 rounded-[2rem] space-y-6"
+                >
+                  <h4 className="text-xl font-serif text-deep-charcoal flex items-center gap-3">
+                    <span className="w-8 h-px bg-primary-bronze/30"></span>
+                    Ecosistema de Saúde
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {["Personal Trainers", "Endocrinologia", "Laboratórios", "Estética"].map((p, i) => (
+                      <span key={i} className="px-4 py-2 bg-white border border-deep-charcoal/5 rounded-full text-[10px] uppercase tracking-widest text-deep-charcoal/60 hover:border-accent-gold/30 hover:text-accent-gold transition-all duration-300">
+                        {p}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Services Teaser */}
-        <section className="py-32 bg-deep-charcoal text-white px-10">
-          <div className="max-w-7xl mx-auto space-y-24">
-            <div className="flex justify-between items-end border-b border-white/10 pb-12">
-              <h3 className="text-4xl md:text-5xl font-serif">Áreas de Atuação</h3>
-              <Link href="/servicos" className="hidden md:block text-[10px] uppercase tracking-[0.3em] font-bold hover:text-accent-gold transition-colors">Ver Todas</Link>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              {["Nutrição Clínica", "Performance Esportiva", "Estética Avançada"].map((s, i) => (
-                <div key={i} className="space-y-6 group cursor-pointer">
-                  <div className="w-full h-px bg-white/10 group-hover:bg-gradient-premium transition-all duration-500"></div>
-                  <h4 className="text-2xl font-serif text-white/90 group-hover:text-accent-gold transition-colors">{s}</h4>
-                  <p className="text-sm text-white/40 leading-relaxed">
-                    Protocolos individualizados baseados em evidência científica para maximizar seus resultados.
-                  </p>
-                  <span className="block text-[10px] uppercase tracking-[0.2em] font-bold text-accent-gold opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">Saiba Mais</span>
+        {/* Premium Services Showcase */}
+        <section className="relative min-h-[800px] flex items-center bg-deep-charcoal overflow-hidden group/session">
+          {/* Background Atmospheric Layer */}
+          <div className="absolute inset-0 z-0 text-white">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeService}
+                initial={{ opacity: 0, scale: 1.1 }}
+                animate={{ opacity: 0.15, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                className="absolute inset-0"
+              >
+                <Image
+                  src={services[activeService].image}
+                  alt={services[activeService].title}
+                  fill
+                  className="object-cover grayscale"
+                />
+              </motion.div>
+            </AnimatePresence>
+            <div className="absolute inset-0 bg-gradient-to-b from-deep-charcoal via-transparent to-deep-charcoal"></div>
+          </div>
+
+          {/* Large Background Typography */}
+          <div className="absolute inset-0 flex items-center justify-center z-0 overflow-hidden pointer-events-none">
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={activeService}
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 0.05, y: 0 }}
+                exit={{ opacity: 0, y: -100 }}
+                transition={{ duration: 1, ease: "circOut" }}
+                className="text-[25vw] font-black text-white tracking-tighter leading-none select-none uppercase"
+              >
+                {services[activeService].bgText}
+              </motion.span>
+            </AnimatePresence>
+          </div>
+
+          <div className="max-w-7xl mx-auto px-6 md:px-10 w-full relative z-10 py-32">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center text-white">
+              <div className="space-y-12">
+                <div className="space-y-6">
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="text-[10px] uppercase tracking-[0.8em] font-black text-accent-gold"
+                  >
+                    Especialidades
+                  </motion.span>
+                  <h3 className="text-4xl md:text-6xl font-serif">Áreas de <br /> <span className="italic font-light opacity-60">Atuação</span></h3>
                 </div>
-              ))}
+
+                <div className="space-y-0 border-l border-white/5">
+                  {services.map((service, index) => (
+                    <div
+                      key={index}
+                      onMouseEnter={() => setActiveService(index)}
+                      className="group cursor-pointer py-8 pl-8 relative"
+                    >
+                      {/* Interactive underline */}
+                      <motion.div
+                        initial={false}
+                        animate={{
+                          width: activeService === index ? "100%" : "0%",
+                          opacity: activeService === index ? 1 : 0
+                        }}
+                        className="absolute bottom-0 left-0 h-px bg-gradient-premium origin-left"
+                      />
+
+                      <div className="relative z-10 space-y-2">
+                        <div className="flex items-center gap-4">
+                          <span className={`text-xs font-mono transition-colors duration-500 ${activeService === index ? "text-accent-gold" : "text-white/20"}`}>
+                            0{index + 1}
+                          </span>
+                          <h4 className={`text-2xl md:text-4xl font-serif transition-all duration-500 transform ${activeService === index ? "text-white translate-x-2" : "text-white/40"}`}>
+                            {service.title}
+                          </h4>
+                        </div>
+                        {activeService === index && (
+                          <motion.p
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="text-sm md:text-base text-white/50 font-light max-w-sm ml-10"
+                          >
+                            {service.description}
+                          </motion.p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="pt-8">
+                  <Link
+                    href="/servicos"
+                    className="group flex items-center gap-4 text-[10px] uppercase tracking-[0.4em] font-bold text-white hover:text-accent-gold transition-colors"
+                  >
+                    Explorar Todas
+                    <motion.span
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ repeat: Infinity, duration: 1.5 }}
+                      className="text-accent-gold"
+                    >
+                      →
+                    </motion.span>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Visual Showcase Side */}
+              <div className="hidden lg:block relative aspect-square">
+                <div className="absolute inset-0 border border-white/5 rounded-full animate-spin-slow"></div>
+                <div className="absolute inset-8 border border-white/5 rounded-full animate-reverse-spin-slow"></div>
+
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeService}
+                    initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                    exit={{ opacity: 0, scale: 1.1, rotate: 10 }}
+                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                    className="absolute inset-20 bg-white/5 backdrop-blur-3xl rounded-3xl border border-white/10 overflow-hidden shadow-2xl p-4"
+                  >
+                    <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-inner">
+                      <Image
+                        src={services[activeService].image}
+                        alt={services[activeService].title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+
+                {/* Decorative floating elements */}
+                <div className="absolute top-1/4 -left-12 w-24 h-24 bg-accent-gold/10 rounded-full blur-2xl"></div>
+                <div className="absolute bottom-1/4 -right-12 w-32 h-32 bg-primary-bronze/10 rounded-full blur-3xl"></div>
+              </div>
             </div>
           </div>
         </section>
@@ -162,7 +359,7 @@ export default function Home() {
                   <div key={i} className="inline-block w-48 h-48 md:w-64 md:h-64 relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 shrink-0 hover:border-accent-gold/50 transition-colors duration-500 grayscale hover:grayscale-0">
                     <Image
                       src={`/images/clientes/${img}`}
-                      alt="Cliente da Clínica Vivian Sanches"
+                      alt="Cliente da Clínica Sanches"
                       width={256}
                       height={256}
                       className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
@@ -180,7 +377,7 @@ export default function Home() {
                   <div key={`dup-${i}`} className="inline-block w-48 h-48 md:w-64 md:h-64 relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 shrink-0 hover:border-accent-gold/50 transition-colors duration-500 grayscale hover:grayscale-0">
                     <Image
                       src={`/images/clientes/${img}`}
-                      alt="Cliente da Clínica Vivian Sanches"
+                      alt="Cliente da Clínica Sanches"
                       width={256}
                       height={256}
                       className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
@@ -240,7 +437,7 @@ export default function Home() {
               </div>
               <div className="text-4xl text-accent-gold mb-6 font-serif opacity-30">“</div>
               <p className="text-deep-charcoal/70 font-sans italic leading-relaxed mb-6 flex-grow">
-                Eu super indico a clínica Dra Vivian Sanches é uma excelente clínica e uma ótima profissional e uma excelente nutricionista competente agendem suas consultas gente, vocês não vão se arrepender estarão passando com uma das melhores nutricionista do Brasil.
+                Eu super indico a Clínica Sanches é uma excelente clínica e uma ótima profissional e uma excelente nutricionista competente agendem suas consultas gente, vocês não vão se arrepender estarão passando com uma das melhores nutricionista do Brasil.
               </p>
               <div className="w-12 h-px bg-primary-bronze/20 mb-4"></div>
               <h5 className="font-serif text-xl text-deep-charcoal">Marcela Lima</h5>

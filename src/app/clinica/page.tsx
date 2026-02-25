@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Scale, Activity, Camera, Heart, Lightbulb, ShieldCheck, Users, Smartphone, Clock, Utensils, MessageCircle, Sparkles, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import TeamSection from "@/components/TeamSection";
 
 export default function Clinica() {
     const galleryImages = [
@@ -43,7 +44,7 @@ export default function Clinica() {
                         <div className="absolute inset-0 bg-gradient-premium rounded-full blur-[100px] opacity-20"></div>
                         <Image
                             src="/images/clinica/team-header.png"
-                            alt="Equipe Clínica Vivian Sanches"
+                            alt="Equipe Clínica Sanches"
                             width={600}
                             height={400}
                             className="relative z-10 w-full max-w-lg mx-auto drop-shadow-2xl animate-in fade-in slide-in-from-bottom duration-1000"
@@ -62,7 +63,7 @@ export default function Clinica() {
                         </h2>
                         <div className="space-y-6 text-deep-charcoal/60 font-sans leading-relaxed text-lg text-justify">
                             <p>
-                                A Clínica Vivian Sanches Consultoria Nutricional visa detectar e restabelecer possíveis desajustes nutricionais
+                                A Clínica Sanches Consultoria Nutricional visa detectar e restabelecer possíveis desajustes nutricionais
                                 que, quando afetam o indivíduo, promovem desequilíbrios bioquímicos alterando o bom funcionamento do organismo.
                             </p>
                             <p>
@@ -174,36 +175,8 @@ export default function Clinica() {
                 </div>
             </section>
 
-            {/* 4. Team Section Placeholder (Kept for individual photos if needed) */}
-            <section className="py-32 px-10 max-w-7xl mx-auto text-center space-y-16">
-                <div className="space-y-6">
-                    <div className="flex justify-center text-primary-bronze mb-4">
-                        <Users size={40} strokeWidth={1} />
-                    </div>
-                    <h2 className="text-4xl font-serif text-deep-charcoal">Nossa Equipe</h2>
-                    <p className="text-xl text-deep-charcoal/60 font-sans max-w-2xl mx-auto">
-                        Conheça nossa equipe de profissionais capacitados e prontos para oferecer o melhor atendimento.
-                    </p>
-                </div>
-
-                {/* Team Grid Placeholder - User will upload images later */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                    {[1, 2, 3].map((_, i) => (
-                        <div key={i} className="group space-y-6">
-                            <div className="aspect-[3/4] bg-warm-alabaster rounded-[32px] overflow-hidden relative border border-primary-bronze/10">
-                                <div className="absolute inset-0 flex items-center justify-center flex-col gap-4 text-deep-charcoal/20 group-hover:bg-white/50 transition-colors duration-500">
-                                    <Camera size={48} strokeWidth={1} />
-                                    <span className="text-xs uppercase tracking-widest font-bold">Foto da Equipe</span>
-                                </div>
-                            </div>
-                            <div className="space-y-2">
-                                <h4 className="text-xl font-serif text-deep-charcoal">Nome do Profissional</h4>
-                                <p className="text-xs uppercase tracking-widest text-primary-bronze font-bold">Especialidade</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
+            {/* 4. Team Section */}
+            <TeamSection />
 
             {/* 5. Diferenciais / App Section */}
             <section className="py-32 px-10 bg-deep-charcoal text-white relative overflow-hidden">
