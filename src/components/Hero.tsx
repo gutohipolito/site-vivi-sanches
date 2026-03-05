@@ -24,8 +24,7 @@ export default function Hero() {
                 <div className="max-w-xl space-y-8 mx-auto lg:mx-0">
                     <div className="w-24 h-px bg-deep-charcoal/10 mx-auto lg:mx-0"></div>
                     <p className="text-lg text-deep-charcoal/60 leading-relaxed font-sans font-light">
-                        Deteção e restabelecimento de desajustes nutricionais através de
-                        uma abordagem científica rigorosa e individualização absoluta.
+                        Estratégias nutricionais personalizadas com base científica rigorosa para transformar seu metabolismo, saúde e performance.
                     </p>
                     <div className="flex gap-6 items-center justify-center lg:justify-start">
                         <a href="/servicos" className="bg-gradient-premium text-white px-8 py-4 uppercase text-[10px] font-bold tracking-[0.3em] hover:shadow-glow-gold hover:-translate-y-1 transition-all duration-500 rounded-full shadow-xl shadow-primary-bronze/20">

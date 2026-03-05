@@ -147,7 +147,7 @@ export default function Home() {
                     Ecosistema de Saúde
                   </h4>
                   <div className="flex flex-wrap gap-2">
-                    {["Personal Trainers", "Endocrinologia", "Laboratórios", "Estética"].map((p, i) => (
+                    {["Nutrição", "Estética", "Nutrologia", "Endocrinologia", "Ginecologia", "Educador físico"].map((p, i) => (
                       <span key={i} className="px-4 py-2 bg-white border border-deep-charcoal/5 rounded-full text-[10px] uppercase tracking-widest text-deep-charcoal/60 hover:border-accent-gold/30 hover:text-accent-gold transition-all duration-300">
                         {p}
                       </span>
