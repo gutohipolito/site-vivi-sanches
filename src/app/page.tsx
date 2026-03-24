@@ -7,6 +7,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { personalities } from "@/constants/personalities";
+import PersonalitiesSlider from "@/components/PersonalitiesSlider";
 
 
 export default function Home() {
@@ -301,41 +302,7 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Marquee Gallery - Multi-row Dynamic */}
-            <div className="relative w-full overflow-hidden group space-y-8">
-              <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-deep-charcoal to-transparent z-10"></div>
-              <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-deep-charcoal to-transparent z-10"></div>
-
-              {/* Row 1: Leftward */}
-              <div className="flex gap-8 animate-marquee whitespace-nowrap">
-                {[...personalities.slice(0, 16), ...personalities.slice(0, 16)].map((img, i) => (
-                  <div key={`row1-${i}`} className="inline-block w-48 h-48 md:w-64 md:h-64 relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 shrink-0 hover:border-accent-gold/50 transition-all duration-500 hover:scale-105 z-20">
-                    <Image
-                      src={`/images/clientes/${img}`}
-                      alt="Cliente da Clínica Sanches"
-                      width={256}
-                      height={256}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-
-              {/* Row 2: Rightward (Reverse) */}
-              <div className="flex gap-8 animate-marquee-reverse whitespace-nowrap">
-                {[...personalities.slice(16), ...personalities.slice(16)].map((img, i) => (
-                  <div key={`row2-${i}`} className="inline-block w-48 h-48 md:w-64 md:h-64 relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 shrink-0 hover:border-accent-gold/50 transition-all duration-500 hover:scale-105 z-20">
-                    <Image
-                      src={`/images/clientes/${img}`}
-                      alt="Cliente da Clínica Sanches"
-                      width={256}
-                      height={256}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
+            <PersonalitiesSlider />
           </div>
         </section>
 
