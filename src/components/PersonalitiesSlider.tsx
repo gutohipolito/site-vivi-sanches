@@ -8,12 +8,13 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { personalities } from "@/constants/personalities";
 
 export default function PersonalitiesSlider() {
+  // Speed reduced from 1.5 to 1.0 as requested
   const [emblaRef1, emblaApi1] = useEmblaCarousel({ loop: true, dragFree: true }, [
-    AutoScroll({ playOnInit: true, speed: 1.5, stopOnInteraction: false, stopOnMouseEnter: true, direction: "backward" })
+    AutoScroll({ playOnInit: true, speed: 1.0, stopOnInteraction: false, stopOnMouseEnter: true, direction: "backward" })
   ]);
   
   const [emblaRef2, emblaApi2] = useEmblaCarousel({ loop: true, dragFree: true }, [
-    AutoScroll({ playOnInit: true, speed: 1.5, stopOnInteraction: false, stopOnMouseEnter: true, direction: "forward" })
+    AutoScroll({ playOnInit: true, speed: 1.0, stopOnInteraction: false, stopOnMouseEnter: true, direction: "forward" })
   ]);
 
   const [isHovered, setIsHovered] = useState(false);
@@ -41,16 +42,19 @@ export default function PersonalitiesSlider() {
       <div className="space-y-6 md:space-y-8">
         {/* Row 1 */}
         <div className="overflow-hidden" ref={emblaRef1}>
-          <div className="flex gap-4 md:gap-8 ml-4 md:ml-8">
+          {/* Embla container: Negative margin to offset slider padding */}
+          <div className="flex -ml-4 md:-ml-8 touch-pan-y">
             {personalities.slice(0, 16).map((img, i) => (
-              <div key={`row1-${i}`} className="flex-none w-32 h-32 md:w-48 md:h-48 relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-accent-gold/50 transition-all duration-500 hover:scale-105 z-20 cursor-grab active:cursor-grabbing">
-                <Image
-                  src={`/images/clientes/${img}`}
-                  alt="Cliente da Clínica Sanches"
-                  width={192}
-                  height={192}
-                  className="w-full h-full object-cover pointer-events-none"
-                />
+              <div key={`row1-${i}`} className="flex-[0_0_auto] min-w-0 pl-4 md:pl-8">
+                <div className="w-32 h-32 md:w-48 md:h-48 relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-accent-gold/50 transition-all duration-500 hover:scale-105 z-20 cursor-grab active:cursor-grabbing">
+                  <Image
+                    src={`/images/clientes/${img}`}
+                    alt="Cliente da Clínica Sanches"
+                    width={192}
+                    height={192}
+                    className="w-full h-full object-cover pointer-events-none"
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -58,16 +62,18 @@ export default function PersonalitiesSlider() {
 
         {/* Row 2 */}
         <div className="overflow-hidden" ref={emblaRef2}>
-          <div className="flex gap-4 md:gap-8 ml-4 md:ml-8">
+          <div className="flex -ml-4 md:-ml-8 touch-pan-y">
             {personalities.slice(16).map((img, i) => (
-               <div key={`row2-${i}`} className="flex-none w-32 h-32 md:w-48 md:h-48 relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-accent-gold/50 transition-all duration-500 hover:scale-105 z-20 cursor-grab active:cursor-grabbing">
-                <Image
-                  src={`/images/clientes/${img}`}
-                  alt="Cliente da Clínica Sanches"
-                  width={192}
-                  height={192}
-                  className="w-full h-full object-cover pointer-events-none"
-                />
+               <div key={`row2-${i}`} className="flex-[0_0_auto] min-w-0 pl-4 md:pl-8">
+                <div className="w-32 h-32 md:w-48 md:h-48 relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-accent-gold/50 transition-all duration-500 hover:scale-105 z-20 cursor-grab active:cursor-grabbing">
+                  <Image
+                    src={`/images/clientes/${img}`}
+                    alt="Cliente da Clínica Sanches"
+                    width={192}
+                    height={192}
+                    className="w-full h-full object-cover pointer-events-none"
+                  />
+                </div>
               </div>
             ))}
           </div>
