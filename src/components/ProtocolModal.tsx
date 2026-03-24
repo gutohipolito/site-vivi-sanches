@@ -44,7 +44,7 @@ export default function ProtocolModal({ isOpen, onClose, protocol }: ProtocolMod
                                 src={protocol.image}
                                 alt={protocol.title}
                                 fill
-                                className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                                className="object-cover transition-all duration-1000"
                             />
                             <div className="absolute inset-0 bg-primary-bronze/10 mix-blend-multiply"></div>
                         </div>

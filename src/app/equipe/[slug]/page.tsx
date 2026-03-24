@@ -84,7 +84,7 @@ export default async function ProfessionalPage({ params }: { params: Promise<{ s
                                     src={member.image}
                                     alt={member.name}
                                     fill
-                                    className="object-cover rounded-[2rem] grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                                    className="object-cover rounded-[2rem] transition-all duration-1000 group-hover:scale-105"
                                 />
                             )}
                         </div>
@@ -271,7 +271,7 @@ export default async function ProfessionalPage({ params }: { params: Promise<{ s
                                     src="/images/equipe/odontologia-real.jpg"
                                     alt="Odontologia e Harmonização Orofacial"
                                     fill
-                                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+                                    className="object-cover transition-all duration-1000 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-l from-white/20 to-transparent"></div>
                                 <div className="absolute bottom-8 left-8 z-10">

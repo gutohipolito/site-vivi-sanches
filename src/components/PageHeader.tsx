@@ -19,7 +19,7 @@ export default function PageHeader({
         <div className="relative pt-48 pb-24 px-10 bg-warm-alabaster overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <div
-                    className="absolute inset-0 bg-cover bg-center opacity-5 grayscale mix-blend-multiply"
+                    className="absolute inset-0 bg-cover bg-center opacity-5 mix-blend-multiply"
                     style={{ backgroundImage: `url('${image}')` }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-warm-alabaster"></div>

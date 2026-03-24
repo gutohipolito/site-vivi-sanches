@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { personalities } from "@/constants/personalities";
 
 
 export default function Home() {
@@ -15,22 +16,19 @@ export default function Home() {
     {
       title: "Nutrição Clínica",
       slug: "clinica",
-      description: "Equilíbrio bioquímico e restauração da saúde através da nutrição funcional.",
-      image: "/images/clinica/protocol_metabolic.png",
+      description: "Equilíbrio bioquímico e restauração da saúde através da nutrição funcional de alta precisão.",
       bgText: "PRECISÃO"
     },
     {
       title: "Performance Esportiva",
       slug: "performance",
-      description: "Maximização de resultados e otimização metabólica para atletas e entusiastas.",
-      image: "/images/clinica/protocol_performance.png",
+      description: "Maximização de performance e otimização metabólica para atletas e entusiastas do alto rendimento.",
       bgText: "POTÊNCIA"
     },
     {
       title: "Estética Avançada",
       slug: "estetica",
-      description: "Protocolos integrados para beleza real fundamentada em saúde celular.",
-      image: "/images/clinica/protocol_aesthetic.png",
+      description: "Protocolos integrados para beleza real fundamentada na saúde celular e longevidade.",
       bgText: "ESSÊNCIA"
     }
   ];
@@ -78,7 +76,7 @@ export default function Home() {
                   className="lg:max-w-md"
                 >
                   <p className="text-xl md:text-2xl text-deep-charcoal/70 font-sans font-light leading-relaxed">
-                    A convergência entre a <span className="text-primary-bronze font-normal">bioquímica avançada</span> e o acolhimento humano. Restauramos o equilíbrio para que sua melhor versão emerja.
+                    Onde a <span className="text-primary-bronze font-normal">ciência da longevidade</span> encontra o cuidado individualizado. Restauramos o equilíbrio bioquímico para que sua melhor performance emerja.
                   </p>
                 </motion.div>
               </div>
@@ -111,7 +109,7 @@ export default function Home() {
                 >
                   <h3 className="text-2xl md:text-3xl font-serif text-white mb-3 md:mb-4">Estrutura Premium</h3>
                   <p className="text-sm md:text-base text-white/80 font-light leading-relaxed">
-                    Equipamentos de última geração em um ambiente projetado para o seu conforto e privacidade.
+                    Infraestrutura de alta tecnologia em um ambiente privativo, desenhado para uma experiência de saúde superior.
                   </p>
                 </motion.div>
               </motion.div>
@@ -129,7 +127,7 @@ export default function Home() {
                     <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent-gold">Tecnologia Própria</span>
                     <h4 className="text-2xl font-serif text-deep-charcoal">Acompanhamento 360º</h4>
                     <p className="text-sm text-deep-charcoal/60 leading-relaxed font-light">
-                      Plano alimentar dinâmico via app exclusivo, com chat direto e monitoramento de metas em tempo real.
+                      Sua estratégia nutricional na palma da mão: monitoramento ativo de resultados e suporte direto via app exclusivo.
                     </p>
                   </div>
                 </motion.div>
@@ -162,25 +160,20 @@ export default function Home() {
         {/* Premium Services Showcase */}
         <section className="relative min-h-[600px] md:min-h-[800px] flex items-center bg-deep-charcoal overflow-hidden group/session">
           {/* Background Atmospheric Layer */}
-          <div className="absolute inset-0 z-0 text-white">
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            {/* Ambient Background Glows */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-[0.03] pointer-events-none"></div>
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeService}
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: 0.15, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 1.5, ease: "easeOut" }}
-                className="absolute inset-0"
-              >
-                <Image
-                  src={services[activeService].image}
-                  alt={services[activeService].title}
-                  fill
-                  className="object-cover grayscale"
-                />
-              </motion.div>
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.15 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1.5 }}
+                className="absolute inset-0 bg-gradient-to-br from-accent-gold/20 via-transparent to-primary-bronze/20 blur-[120px]"
+              />
             </AnimatePresence>
-            <div className="absolute inset-0 bg-gradient-to-b from-deep-charcoal via-transparent to-deep-charcoal"></div>
+            <div className="absolute inset-0 bg-deep-charcoal/40 backdrop-blur-3xl"></div>
           </div>
 
           {/* Large Background Typography */}
@@ -200,9 +193,9 @@ export default function Home() {
           </div>
 
           <div className="max-w-7xl mx-auto px-6 md:px-10 w-full relative z-10 py-16 md:py-32">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center text-white">
-              <div className="space-y-12">
-                <div className="space-y-6">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center text-white">
+              <div className="lg:col-span-12 space-y-12">
+                <div className="space-y-6 text-center lg:text-left">
                   <motion.span
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -210,94 +203,59 @@ export default function Home() {
                   >
                     Especialidades
                   </motion.span>
-                  <h3 className="text-4xl md:text-6xl font-serif">Áreas de <br /> <span className="italic font-light opacity-60">Atuação</span></h3>
+                  <h3 className="text-5xl md:text-7xl lg:text-8xl font-serif">Áreas de <br className="hidden lg:block" /> <span className="italic font-light opacity-60">Atuação</span></h3>
                 </div>
 
-                <div className="space-y-0 border-l border-white/5">
+                <div className="space-y-0 border-l border-white/5 lg:border-l-0 lg:grid lg:grid-cols-3 lg:gap-8">
                   {services.map((service, index) => (
                     <div
                       key={index}
                       onMouseEnter={() => setActiveService(index)}
-                      className="group cursor-pointer py-8 pl-8 relative"
+                      className="group cursor-pointer py-10 md:py-16 px-8 relative border-b border-white/5 lg:border-b-0 lg:border-r lg:last:border-r-0 transition-all duration-500 hover:bg-white/[0.02]"
                     >
-                      {/* Interactive underline */}
+                      {/* Interactive underline/glow indicator */}
                       <motion.div
                         initial={false}
                         animate={{
                           width: activeService === index ? "100%" : "0%",
                           opacity: activeService === index ? 1 : 0
                         }}
-                        className="absolute bottom-0 left-0 h-px bg-gradient-premium origin-left"
+                        className="absolute bottom-0 left-0 h-0.5 bg-gradient-premium origin-left z-20"
                       />
 
-                      <div className="relative z-10 space-y-2">
-                        <div className="flex items-center gap-4">
-                          <span className={`text-xs font-mono transition-colors duration-500 ${activeService === index ? "text-accent-gold" : "text-white/20"}`}>
+                      <div className="relative z-10 space-y-6">
+                        <div className="flex flex-col gap-4">
+                          <span className={`text-xs font-mono tracking-[0.3em] transition-colors duration-500 ${activeService === index ? "text-accent-gold" : "text-white/20"}`}>
                             0{index + 1}
                           </span>
-                          <h4 className={`text-2xl md:text-4xl font-serif transition-all duration-500 transform ${activeService === index ? "text-white translate-x-2" : "text-white/40"}`}>
+                          <h4 className={`text-3xl md:text-4xl lg:text-5xl font-serif leading-tight transition-all duration-500 transform ${activeService === index ? "text-white translate-x-2" : "text-white/40 group-hover:text-white/60"}`}>
                             {service.title}
                           </h4>
                         </div>
-                        {activeService === index && (
-                          <motion.p
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            className="text-sm md:text-base text-white/50 font-light max-w-sm ml-10"
-                          >
-                            {service.description}
-                          </motion.p>
-                        )}
+
+                        <p className={`text-sm md:text-base transition-all duration-700 font-light leading-relaxed max-w-sm ${activeService === index ? "text-white/60 opacity-100 translate-y-0" : "text-white/0 opacity-0 translate-y-4"}`}>
+                          {service.description}
+                        </p>
                       </div>
                     </div>
                   ))}
                 </div>
 
-                <div className="pt-8">
+                <div className="pt-12 text-center">
                   <Link
                     href="/servicos"
-                    className="group flex items-center gap-4 text-[10px] uppercase tracking-[0.4em] font-bold text-white hover:text-accent-gold transition-colors"
+                    className="group inline-flex items-center gap-6 text-[10px] uppercase tracking-[0.5em] font-bold text-white hover:text-accent-gold transition-colors py-4 px-8 border border-white/10 rounded-full hover:border-accent-gold/40"
                   >
-                    Explorar Todas
+                    Explorar Todos os Protocolos
                     <motion.span
                       animate={{ x: [0, 5, 0] }}
                       transition={{ repeat: Infinity, duration: 1.5 }}
-                      className="text-accent-gold"
+                      className="text-accent-gold text-base"
                     >
                       →
                     </motion.span>
                   </Link>
                 </div>
-              </div>
-
-              {/* Visual Showcase Side */}
-              <div className="hidden lg:block relative aspect-square">
-                <div className="absolute inset-0 border border-white/5 rounded-full animate-spin-slow"></div>
-                <div className="absolute inset-8 border border-white/5 rounded-full animate-reverse-spin-slow"></div>
-
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={activeService}
-                    initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                    exit={{ opacity: 0, scale: 1.1, rotate: 10 }}
-                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                    className="absolute inset-20 bg-white/5 backdrop-blur-3xl rounded-3xl border border-white/10 overflow-hidden shadow-2xl p-4"
-                  >
-                    <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-inner">
-                      <Image
-                        src={services[activeService].image}
-                        alt={services[activeService].title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-
-                {/* Decorative floating elements */}
-                <div className="absolute top-1/4 -left-12 w-24 h-24 bg-accent-gold/10 rounded-full blur-2xl"></div>
-                <div className="absolute bottom-1/4 -right-12 w-32 h-32 bg-primary-bronze/10 rounded-full blur-3xl"></div>
               </div>
             </div>
           </div>
@@ -320,7 +278,7 @@ export default function Home() {
                 src="/images/clinica/vivi-home-site.jpg"
                 alt="Dra. Vivian Sanches"
                 fill
-                className="object-cover rounded-[1.5rem] grayscale hover:grayscale-0 transition-all duration-500"
+                className="object-cover rounded-[1.5rem] transition-all duration-500"
               />
             </div>
           </div>
@@ -343,44 +301,36 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Marquee Gallery */}
-            <div className="relative w-full overflow-hidden group">
+            {/* Marquee Gallery - Multi-row Dynamic */}
+            <div className="relative w-full overflow-hidden group space-y-8">
               <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-deep-charcoal to-transparent z-10"></div>
               <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-deep-charcoal to-transparent z-10"></div>
 
-              <div className="inline-flex gap-8 animate-marquee whitespace-nowrap">
-                {[
-                  "Cristian_Baroni.png", "DInho_machado.png", "Ju_Leme.png", "amanda_gontijo.png",
-                  "bruno.png", "catherine_bascoy.png", "eduguedes-1.png", "erikka-1.png", "faro.png",
-                  "fernanda_hernandes.jpg", "igao.jpg", "italo.png", "joelma.jpg", "juju-1.jpg",
-                  "matheus.png", "milene.png", "mionzinho.png", "rodrigo_capella.png", "ronald.png",
-                  "thiago_nigro.png", "valeska.png", "victor-sarro.png", "victor_teixeira.png"
-                ].map((img, i) => (
-                  <div key={i} className="inline-block w-48 h-48 md:w-64 md:h-64 relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 shrink-0 hover:border-accent-gold/50 transition-colors duration-500 grayscale hover:grayscale-0">
+              {/* Row 1: Leftward */}
+              <div className="flex gap-8 animate-marquee whitespace-nowrap">
+                {[...personalities.slice(0, 16), ...personalities.slice(0, 16)].map((img, i) => (
+                  <div key={`row1-${i}`} className="inline-block w-48 h-48 md:w-64 md:h-64 relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 shrink-0 hover:border-accent-gold/50 transition-all duration-500 hover:scale-105 z-20">
                     <Image
                       src={`/images/clientes/${img}`}
                       alt="Cliente da Clínica Sanches"
                       width={256}
                       height={256}
-                      className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 ))}
-                {/* Duplicate for smooth loop */}
-                {[
-                  "Cristian_Baroni.png", "DInho_machado.png", "Ju_Leme.png", "amanda_gontijo.png",
-                  "bruno.png", "catherine_bascoy.png", "eduguedes-1.png", "erikka-1.png", "faro.png",
-                  "fernanda_hernandes.jpg", "igao.jpg", "italo.png", "joelma.jpg", "juju-1.jpg",
-                  "matheus.png", "milene.png", "mionzinho.png", "rodrigo_capella.png", "ronald.png",
-                  "thiago_nigro.png", "valeska.png", "victor-sarro.png", "victor_teixeira.png"
-                ].map((img, i) => (
-                  <div key={`dup-${i}`} className="inline-block w-48 h-48 md:w-64 md:h-64 relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 shrink-0 hover:border-accent-gold/50 transition-colors duration-500 grayscale hover:grayscale-0">
+              </div>
+
+              {/* Row 2: Rightward (Reverse) */}
+              <div className="flex gap-8 animate-marquee-reverse whitespace-nowrap">
+                {[...personalities.slice(16), ...personalities.slice(16)].map((img, i) => (
+                  <div key={`row2-${i}`} className="inline-block w-48 h-48 md:w-64 md:h-64 relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 shrink-0 hover:border-accent-gold/50 transition-all duration-500 hover:scale-105 z-20">
                     <Image
                       src={`/images/clientes/${img}`}
                       alt="Cliente da Clínica Sanches"
                       width={256}
                       height={256}
-                      className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 ))}

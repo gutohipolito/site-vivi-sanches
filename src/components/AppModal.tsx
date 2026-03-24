@@ -60,7 +60,7 @@ export default function AppModal({ isOpen, onClose }: AppModalProps) {
                                         src="/images/patterns/vivisanches-overlay.png"
                                         alt=""
                                         fill
-                                        className="object-cover grayscale"
+                                        className="object-cover"
                                     />
                                 </div>
 

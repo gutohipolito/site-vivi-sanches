@@ -45,7 +45,7 @@ export default function TeamSection() {
                                             src={member.image}
                                             alt={member.name}
                                             fill
-                                            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                                            className="object-cover transition-all duration-700 group-hover:scale-105"
                                         />
                                     )}
                                 </div>

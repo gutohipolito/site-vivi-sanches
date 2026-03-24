@@ -45,12 +45,11 @@ export default function Contato() {
                                 </span>
                                 <ArrowRight size={16} />
                             </a>
-                            <a href="tel:+551126685049" className="flex items-center justify-between w-full p-4 rounded-xl bg-primary-bronze/5 text-primary-bronze hover:bg-primary-bronze/10 transition-colors">
+                            <div className="flex items-center justify-between w-full p-4 rounded-xl bg-primary-bronze/5 text-primary-bronze opacity-70">
                                 <span className="flex items-center gap-3 font-bold text-sm">
-                                    <Phone size={18} /> (11) 2668-5049
+                                    <Phone size={18} /> Telefone
                                 </span>
-                                <ArrowRight size={16} />
-                            </a>
+                            </div>
                         </div>
                     </div>
 
