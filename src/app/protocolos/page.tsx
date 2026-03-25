@@ -132,10 +132,10 @@ export default function ProtocolosPage() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-serif text-deep-charcoal leading-tight"
+                        className="text-5xl md:text-8xl font-serif text-deep-charcoal leading-[0.85] tracking-tighter"
                     >
-                        Tecnologia a favor da sua <br />
-                        <span className="text-primary-bronze italic">Performance e Saúde.</span>
+                        Performance <br />
+                        <span className="text-primary-bronze italic md:ml-20">& Saúde.</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -182,7 +182,9 @@ export default function ProtocolosPage() {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div className="space-y-8">
                         <span className="text-[10px] uppercase tracking-[0.4em] font-black text-primary-bronze">Segurança em Primeiro Lugar</span>
-                        <h3 className="text-3xl md:text-4xl font-serif text-deep-charcoal">Abordagem Baseada em <br /> Evidências</h3>
+                        <h3 className="text-3xl md:text-7xl font-serif text-deep-charcoal leading-[0.85] tracking-tight">
+                            Baseada em <br /> <span className="text-primary-bronze italic md:ml-20">Evidências.</span>
+                        </h3>
                         <p className="text-deep-charcoal/60 leading-relaxed font-light">
                             Toda prescrição de terapia injetável é precedida por uma avaliação clínica minuciosa e análise laboratorial.
                             Garantimos que cada ativo utilizado esteja alinhado com a necessidade fisiológica real do paciente.

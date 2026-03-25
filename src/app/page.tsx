@@ -63,10 +63,10 @@ export default function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1, duration: 0.8 }}
-                    className="text-5xl md:text-7xl lg:text-8xl font-serif text-deep-charcoal leading-[0.85] tracking-tighter"
+                    className="text-5xl md:text-8xl font-serif text-deep-charcoal leading-[0.85] tracking-tighter"
                   >
                     Clínica <br />
-                    <span className="italic font-light opacity-60 ml-4 lg:ml-12">Sanches</span>
+                    <span className="text-primary-bronze italic md:ml-20">Sanches.</span>
                   </motion.h2>
                 </div>
                 <motion.div
@@ -93,7 +93,7 @@ export default function Home() {
                 className="col-span-12 lg:col-span-8 relative rounded-[2rem] md:rounded-[4rem] overflow-hidden aspect-[4/5] md:aspect-[16/9] shadow-2xl shadow-primary-bronze/10 group"
               >
                 <Image
-                  src="/images/clinica/fotoclinica1.png"
+                  src="/images/clinica/img-clinica-vivian-new-01.jpeg"
                   alt="Estrutura da Clínica Sanches"
                   fill
                   className="object-cover transform group-hover:scale-110 transition-transform duration-[3s] ease-out"
@@ -204,7 +204,9 @@ export default function Home() {
                   >
                     Especialidades
                   </motion.span>
-                  <h3 className="text-5xl md:text-7xl lg:text-8xl font-serif">Áreas de <br className="hidden lg:block" /> <span className="italic font-light opacity-60">Atuação</span></h3>
+                  <h3 className="text-5xl md:text-8xl font-serif text-white leading-[0.85] tracking-tighter">
+                    Áreas de <br /> <span className="text-accent-gold italic md:ml-20">Atuação.</span>
+                  </h3>
                 </div>
 
                 <div className="space-y-0 border-l border-white/5 lg:border-l-0 lg:grid lg:grid-cols-3 lg:gap-8">
@@ -310,12 +312,12 @@ export default function Home() {
         <section className="py-24 px-6 md:px-10 max-w-7xl mx-auto bg-warm-alabaster relative">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20 mix-blend-multiply pointer-events-none"></div>
 
-          <div className="text-center mb-16 relative z-10">
-            <h2 className="text-[10px] uppercase tracking-[0.6em] font-black text-primary-bronze mb-4">
+          <div className="text-center md:text-left mb-16 relative z-10 space-y-4">
+            <h2 className="text-[10px] uppercase tracking-[0.6em] font-black text-primary-bronze">
               Histórias Reais
             </h2>
-            <h3 className="text-4xl md:text-5xl font-serif text-deep-charcoal">
-              O Que Dizem Nossos Pacientes
+            <h3 className="text-4xl md:text-7xl font-serif text-deep-charcoal leading-[0.85] tracking-tight">
+              Nossos <br /> <span className="text-primary-bronze italic md:ml-20">Pacientes.</span>
             </h3>
           </div>
 

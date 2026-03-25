@@ -23,6 +23,7 @@ export default function Servicos() {
                 title="Áreas de Atuação"
                 subtitle="Especialidades"
                 image="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?q=80&w=2787&auto=format&fit=crop"
+                priority={true}
             />
 
             {/* Services Section - Zig Zag Layout */}
@@ -50,7 +51,9 @@ export default function Servicos() {
                             <Sparkles className="text-primary-bronze w-5 h-5" />
                             <span className="text-[10px] uppercase tracking-[0.4em] font-black text-primary-bronze">Beleza & Autoestima</span>
                         </div>
-                        <h2 className="text-4xl font-serif text-deep-charcoal">Nutrição Estética</h2>
+                        <h2 className="text-4xl md:text-7xl font-serif text-deep-charcoal leading-[0.85] tracking-tight">
+                            Nutrição <br /> <span className="text-primary-bronze italic md:ml-20">Estética.</span>
+                        </h2>
                         <div className="w-16 h-px bg-primary-bronze/30"></div>
                         <p className="text-lg text-deep-charcoal/60 font-sans leading-relaxed text-justify">
                             Os nutrientes são de grande importância na prevenção do envelhecimento precoce, da produção excessiva de radicais livres
@@ -83,7 +86,9 @@ export default function Servicos() {
                             <Activity className="text-primary-bronze w-5 h-5" />
                             <span className="text-[10px] uppercase tracking-[0.4em] font-black text-primary-bronze">Equilíbrio Corporal</span>
                         </div>
-                        <h2 className="text-4xl font-serif text-deep-charcoal">Nutrição Funcional</h2>
+                        <h2 className="text-4xl md:text-7xl font-serif text-deep-charcoal leading-[0.85] tracking-tight">
+                            Nutrição <br /> <span className="text-primary-bronze italic md:ml-20">Funcional.</span>
+                        </h2>
                         <div className="w-16 h-px bg-primary-bronze/30"></div>
                         <p className="text-lg text-deep-charcoal/60 font-sans leading-relaxed text-justify">
                             Acompanhamento personalizado e individualizado de hábitos alimentares e condições de saúde do paciente,
@@ -115,7 +120,9 @@ export default function Servicos() {
                             <Zap className="text-primary-bronze w-5 h-5" />
                             <span className="text-[10px] uppercase tracking-[0.4em] font-black text-primary-bronze">Alta Performance</span>
                         </div>
-                        <h2 className="text-4xl font-serif text-deep-charcoal">Nutrição Esportiva</h2>
+                        <h2 className="text-4xl md:text-7xl font-serif text-deep-charcoal leading-[0.85] tracking-tight">
+                            Nutrição <br /> <span className="text-primary-bronze italic md:ml-20">Esportiva.</span>
+                        </h2>
                         <div className="w-16 h-px bg-primary-bronze/30"></div>
                         <p className="text-lg text-deep-charcoal/60 font-sans leading-relaxed text-justify">
                             O rendimento esportivo está diretamente relacionado à alimentação. Nosso trabalho é atuar na melhora do rendimento do atleta,
@@ -136,8 +143,8 @@ export default function Servicos() {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
                     <div className="lg:order-2 space-y-8 text-center lg:text-left">
                         <span className="text-[10px] uppercase tracking-[0.4em] font-black text-accent-gold">Tecnologia</span>
-                        <h2 className="text-4xl md:text-5xl font-serif leading-tight">
-                            Exame de <br /> <span className="text-accent-gold italic">Bioimpedância</span>
+                        <h2 className="text-4xl md:text-7xl font-serif leading-[0.85] tracking-tight">
+                            Exame de <br /> <span className="text-accent-gold italic md:ml-20">Bioimpedância.</span>
                         </h2>
                         <div className="space-y-6 text-white/70 font-sans leading-relaxed text-justify text-lg max-w-xl mx-auto lg:mx-0">
                             <p>
@@ -179,8 +186,8 @@ export default function Servicos() {
                         className="text-center max-w-3xl mx-auto space-y-4"
                     >
                         <span className="text-[10px] uppercase tracking-[0.4em] font-black text-primary-bronze">Metodologia Exclusiva</span>
-                        <h2 className="text-3xl md:text-5xl font-serif text-deep-charcoal leading-tight">
-                            Parâmetros de Avaliação
+                        <h2 className="text-3xl md:text-7xl font-serif text-deep-charcoal leading-[0.85] tracking-tight">
+                            Parâmetros de <br /> <span className="text-primary-bronze italic md:ml-20">Avaliação.</span>
                         </h2>
                         <p className="text-deep-charcoal/60 font-sans max-w-xl mx-auto">
                             Utilizamos ferramentas precisas para monitorar sua evolução muito além do peso na balança.
@@ -316,6 +323,72 @@ export default function Servicos() {
                     </div>
                 </div>
             </motion.section>
+
+            {/* Premium Procedures Section */}
+            <section className="py-24 px-10 max-w-7xl mx-auto space-y-16">
+                <motion.div
+                    {...fadeInUp}
+                    className="text-center max-w-3xl mx-auto space-y-4"
+                >
+                    <span className="text-[10px] uppercase tracking-[0.4em] font-black text-primary-bronze">Procedimentos Exclusivos</span>
+                    <h2 className="text-3xl md:text-7xl font-serif text-deep-charcoal leading-[0.85] tracking-tight">
+                        Cuidados <br /> <span className="text-primary-bronze italic md:ml-20">Premium.</span>
+                    </h2>
+                </motion.div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {[
+                        {
+                            title: "Liberação Miofascial",
+                            desc: "Técnica especializada para relaxamento muscular profundo e equilíbrio corporal.",
+                            image: "/images/servicos/liberacao-miofascial.png"
+                        },
+                        {
+                            title: "Colocação de DIU",
+                            desc: "Procedimento seguro e humanizado para contracepção de longa duração.",
+                            image: "/images/servicos/diu.png"
+                        },
+                        {
+                            title: "Depilação a Laser",
+                            desc: "Tecnologia de ponta para remoção definitiva de pelos com máximo conforto.",
+                            image: "/images/servicos/depilacao-laser.png"
+                        }
+                    ].map((item, idx) => (
+                        <motion.div
+                            key={idx}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: idx * 0.1 }}
+                            className="group relative"
+                        >
+                            <div className="absolute inset-0 bg-gradient-premium rounded-[2.5rem] blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-700"></div>
+                            <div className="relative bg-white border border-primary-bronze/10 rounded-[2.5rem] overflow-hidden shadow-xl shadow-primary-bronze/5 hover:shadow-glow-gold hover:border-primary-bronze/30 transition-all duration-700 h-full flex flex-col p-2">
+                                <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden">
+                                    <Image
+                                        src={item.image}
+                                        alt={item.title}
+                                        fill
+                                        className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-deep-charcoal/40 to-transparent"></div>
+                                </div>
+                                <div className="p-8 space-y-4 flex-grow text-center">
+                                    <h4 className="text-2xl font-serif text-deep-charcoal group-hover:text-primary-bronze transition-colors">
+                                        {item.title}
+                                    </h4>
+                                    <p className="text-sm text-deep-charcoal/50 font-sans leading-relaxed">
+                                        {item.desc}
+                                    </p>
+                                </div>
+                                <div className="px-8 pb-8 text-center">
+                                    <div className="w-12 h-px bg-primary-bronze/20 mx-auto group-hover:w-full transition-all duration-1000"></div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </section>
 
             {/* FINAL CTA */}
             <motion.section

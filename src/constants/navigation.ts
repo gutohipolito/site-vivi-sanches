@@ -15,6 +15,7 @@ export const navLinks: NavLinkItem[] = [
             { name: "Protocolos", href: "/protocolos" },
         ]
     },
+    { name: "Equipe", href: "/clinica#equipe" },
     { name: "Dicas de Saúde", href: "/dicas-de-saude" },
     { name: "Contato", href: "/contato" }
 ];

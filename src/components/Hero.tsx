@@ -5,13 +5,13 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section className="relative pt-[150px] lg:pt-[300px] pb-0 px-6 md:px-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 overflow-visible">
+        <section className="relative pt-[120px] lg:pt-[160px] pb-12 lg:pb-0 px-6 md:px-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 overflow-visible">
             {/* Left Content */}
             <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-                className="flex-1 space-y-8 text-center lg:text-left relative z-20 lg:-mt-[90px]"
+                className="flex-1 space-y-8 text-center lg:text-left relative z-20"
             >
                 <div className="space-y-4">
                     <div className="text-[10px] uppercase tracking-[0.6em] font-black text-primary-bronze opacity-80">Nutrição Especializada</div>
@@ -37,25 +37,28 @@ export default function Hero() {
                 </div>
             </motion.div>
 
-            {/* Right Image */}
+            {/* Right Image with Architectural Anchor */}
             <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
                 className="flex-1 w-full relative flex justify-center lg:justify-end z-10"
             >
-                {/* Decorative Glow Effect */}
-                <div className="absolute top-1/2 left-1/2 lg:left-3/4 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-accent-gold/10 blur-[100px] -z-10 rounded-full opacity-60 pointer-events-none"></div>
-                
+                {/* Soft ambient glow to blend with the background */}
+                <div className="absolute top-1/2 left-[40%] lg:left-[60%] -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] bg-accent-gold/10 rounded-full blur-[80px] -z-20 pointer-events-none"></div>
+
+                {/* Elegant architectural shape to ground the portrait */}
+                <div className="absolute bottom-0 w-[85%] max-w-[380px] lg:max-w-[450px] aspect-[4/5] bg-gradient-to-t from-warm-alabaster to-white border border-primary-bronze/10 rounded-t-[12rem] -z-10 shadow-2xl shadow-primary-bronze/5"></div>
+
                 <Image
                     src="/images/clinica/vivi-img-hero.png"
                     alt="Dra. Vivian Sanches"
-                    width={854}
-                    height={962}
+                    width={800}
+                    height={1000}
                     priority
-                    quality={75}
+                    quality={90}
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="w-[90%] md:w-[80%] lg:w-auto lg:h-[85vh] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.2)] lg:origin-bottom-right"
+                    className="w-full max-w-md md:max-w-lg lg:max-w-[550px] h-auto object-contain object-bottom drop-shadow-[0_20px_20px_rgba(0,0,0,0.15)] z-10"
                 />
             </motion.div>
         </section>

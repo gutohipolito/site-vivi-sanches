@@ -19,14 +19,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
         role: "Profissional",
         description: "Especialista Clínico",
         slug: "ricardo-modinez",
-        image: "/images/equipe/placeholder-m.jpg",
+        image: "/images/equipe/Dr-Ricardo.jpeg",
     },
     {
         name: "Dr. Bruno Lima",
         role: "Clínico Geral, cirurgias estéticas e transplante capilar",
         description: "Especialista em Procedimentos Estéticos",
         slug: "bruno-lima",
-        image: "/images/equipe/placeholder-m.jpg",
+        image: "/images/equipe/Dr-Bruno.jpeg",
     },
     {
         name: "Dr. Alexandre Ramos da Silva",
@@ -40,14 +40,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
         role: "Esteticista",
         description: "Especialista em Cuidados Estéticos",
         slug: "yasmin",
-        image: "/images/equipe/placeholder-f.jpg",
+        image: "/images/equipe/Yasmin.jpeg",
     },
     {
         name: "Dr. Roberto Krueger",
         role: "Fisioterapeuta Dermato",
         description: "Especialista em Biomedicina Estética",
         slug: "roberto-krueger",
-        image: "/images/equipe/placeholder-m.jpg",
+        image: "/images/equipe/Roberto-Krueger.jpeg",
     },
     {
         name: "Matheus Santebanes",
@@ -75,6 +75,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
         role: "Biomédica",
         description: "Especialista em Reabilitação Estética",
         slug: "lilian",
-        image: "/images/equipe/placeholder-f.jpg",
+        image: "/images/equipe/lilian-sanches.jpg",
     },
 ];

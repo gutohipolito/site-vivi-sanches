@@ -11,12 +11,14 @@ export default function TeamSection() {
     return (
         <section id="equipe" className="py-48 px-10 bg-white">
             <div className="max-w-7xl mx-auto space-y-32">
-                <div className="flex flex-col md:flex-row justify-between items-start gap-10">
-                    <div className="space-y-6">
+                <div className="flex flex-col md:flex-row justify-between items-end gap-10">
+                    <div className="space-y-4">
                         <h2 className="text-[10px] uppercase tracking-[0.8em] font-black text-accent-gold/60">Profissionais</h2>
-                        <h3 className="text-5xl md:text-7xl font-serif text-deep-charcoal leading-none">Corpo <br /> Clínico.</h3>
+                        <h3 className="text-5xl md:text-8xl font-serif text-deep-charcoal leading-[0.85] tracking-tighter">
+                            Corpo <br /> <span className="text-primary-bronze italic md:ml-20">Clínico.</span>
+                        </h3>
                     </div>
-                    <p className="max-w-sm text-sm text-deep-charcoal/40 font-sans leading-relaxed">
+                    <p className="max-w-xs text-xs text-deep-charcoal/40 font-sans leading-relaxed md:text-right">
                         Nossa equipe combina expertise clínica e compromisso humano para um
                         atendimento de excelência pautado em resultados reais.
                     </p>
@@ -46,6 +48,7 @@ export default function TeamSection() {
                                             alt={member.name}
                                             fill
                                             className="object-cover transition-all duration-700 group-hover:scale-105"
+                                            priority={member.slug === "lilian" || member.slug === "matheus-santebanes"}
                                         />
                                     )}
                                 </div>

@@ -7,15 +7,11 @@ import TeamSection from "@/components/TeamSection";
 
 export default function Clinica() {
     const galleryImages = [
-        "/images/clinica/fotoclinica1.png",
-        "/images/clinica/fotoclinica10.png",
-        "/images/clinica/fotoclinica2.png",
-        "/images/clinica/fotoclinica11.png",
-        "/images/clinica/fotoclinica3.png",
-        "/images/clinica/fotoclinica5.png",
-        "/images/clinica/fotoclinica9.png",
-        "/images/clinica/fotoclinica7.png",
-        "/images/clinica/fotoclinica8.png",
+        "/images/clinica/img-clinica-vivian-new-000.jpeg",
+        "/images/clinica/img-clinica-vivian-new-01.jpeg",
+        "/images/clinica/img-clinica-vivian-new-02.jpeg",
+        "/images/clinica/img-clinica-vivian-new-03.jpeg",
+        "/images/clinica/img-clinica-vivian-new-04.jpeg",
     ];
 
     return (
@@ -30,8 +26,8 @@ export default function Clinica() {
                         <span className="text-[10px] uppercase tracking-[0.6em] font-black text-primary-bronze opacity-80">
                             A Clínica
                         </span>
-                        <h1 className="text-5xl md:text-7xl font-serif text-deep-charcoal leading-none tracking-tight">
-                            Estrutura & <br /> Propósito
+                        <h1 className="text-5xl md:text-8xl font-serif text-deep-charcoal leading-[0.85] tracking-tighter">
+                            Estrutura & <br /> <span className="text-primary-bronze italic md:ml-20">Propósito.</span>
                         </h1>
                         <div className="w-24 h-px bg-primary-bronze/30 pt-4"></div>
                         <p className="text-lg text-deep-charcoal/60 font-sans leading-relaxed max-w-md">
@@ -111,7 +107,9 @@ export default function Clinica() {
             <section className="py-24 px-10 max-w-7xl mx-auto">
                 <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
                     <span className="text-[10px] uppercase tracking-[0.4em] font-black text-primary-bronze">Infraestrutura</span>
-                    <h2 className="text-4xl font-serif text-deep-charcoal">Nosso Espaço</h2>
+                    <h2 className="text-4xl md:text-7xl font-serif text-deep-charcoal leading-[0.85] tracking-tight">
+                        Nosso <br /> <span className="text-primary-bronze italic md:ml-20">Espaço.</span>
+                    </h2>
                     <p className="text-sm text-deep-charcoal/60 font-sans leading-relaxed max-w-xl mx-auto">
                         Um ambiente projetado para acolher e inspirar. Clique nas imagens para ampliar.
                     </p>

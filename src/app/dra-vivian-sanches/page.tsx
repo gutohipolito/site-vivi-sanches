@@ -18,8 +18,8 @@ export default function DraVivian() {
                             <span className="text-[10px] uppercase tracking-[0.6em] font-black text-primary-bronze opacity-80">
                                 Nutricionista & Fundadora
                             </span>
-                            <h1 className="text-5xl md:text-7xl font-serif text-deep-charcoal leading-none tracking-tight">
-                                Dra. Vivian Sanches
+                            <h1 className="text-5xl md:text-8xl font-serif text-deep-charcoal leading-[0.85] tracking-tighter">
+                                Dra. Vivian <br /> <span className="text-primary-bronze italic md:ml-20">Sanches.</span>
                             </h1>
                             <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-deep-charcoal/40">
                                 CRN 3 30798
