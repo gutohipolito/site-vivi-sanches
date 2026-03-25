@@ -15,7 +15,6 @@ export default function PageHeader({
     subtitle,
     image = "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop",
     align = "left",
-    priority = false
 }: PageHeaderProps) {
     return (
         <div className="relative pt-48 pb-24 px-10 bg-warm-alabaster overflow-hidden">

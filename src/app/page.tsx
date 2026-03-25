@@ -6,7 +6,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { personalities } from "@/constants/personalities";
 import PersonalitiesSlider from "@/components/PersonalitiesSlider";
 
 
