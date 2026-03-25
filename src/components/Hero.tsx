@@ -44,15 +44,18 @@ export default function Hero() {
                 transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
                 className="flex-1 w-full relative flex justify-center lg:justify-end z-10"
             >
+                {/* Decorative Glow Effect */}
+                <div className="absolute top-1/2 left-1/2 lg:left-3/4 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-accent-gold/10 blur-[100px] -z-10 rounded-full opacity-60 pointer-events-none"></div>
+                
                 <Image
-                    src="/images/clinica/capa-hero-vivi-sanches.png"
+                    src="/images/clinica/vivi-img-hero.png"
                     alt="Dra. Vivian Sanches"
-                    width={800}
-                    height={1000}
+                    width={854}
+                    height={962}
                     priority
-                    quality={85}
+                    quality={75}
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="w-[130%] max-w-none md:w-full lg:scale-[1.45] lg:origin-bottom-right drop-shadow-none opacity-90 object-contain"
+                    className="w-[90%] md:w-[80%] lg:w-auto lg:h-[85vh] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.2)] lg:origin-bottom-right"
                 />
             </motion.div>
         </section>

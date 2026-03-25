@@ -50,11 +50,11 @@ export default function RootLayout({
           {/* Avatar Container */}
           <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full border-4 border-white shadow-2xl shadow-black/20 overflow-hidden transform group-hover:scale-110 transition-transform duration-500">
             <NextImage
-              src="/images/clinica/capa-hero-vivi-sanches.png"
+              src="/images/clinica/vivi-img-hero.png"
               alt="Fale Conosco"
               width={80}
               height={80}
-              quality={60}
+              quality={75}
               sizes="80px"
               className="w-full h-full object-cover"
             />
