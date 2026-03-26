@@ -6,7 +6,13 @@ export interface NavLinkItem {
 }
 
 export const navLinks: NavLinkItem[] = [
-    { name: "A Clínica", href: "/clinica" },
+    {
+        name: "A Clínica",
+        href: "/clinica",
+        children: [
+            { name: "Equipe", href: "/equipe" },
+        ]
+    },
     { name: "Dra. Vivian", href: "/dra-vivian-sanches" },
     {
         name: "Especialidades",
@@ -15,7 +21,6 @@ export const navLinks: NavLinkItem[] = [
             { name: "Protocolos", href: "/protocolos" },
         ]
     },
-    { name: "Equipe", href: "/equipe" },
     { name: "Dicas de Saúde", href: "/dicas-de-saude" },
     { name: "Contato", href: "/contato" }
 ];

@@ -61,14 +61,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
         role: "Nutricionista",
         description: "Especialista em Performance Humana",
         slug: "igor-zanuto",
-        image: "/images/equipe/placeholder-m.jpg",
+        image: "/images/equipe/igor-zanuto.jpeg",
     },
     {
         name: "Lucas Soares",
         role: "Nutricionista",
         description: "Especialista em Nutrição de Precisão",
         slug: "lucas-soares",
-        image: "/images/equipe/placeholder-m.jpg",
+        image: "/images/equipe/lucas-soares.png",
     },
     {
         name: "Dra. Lilian Sanches",
