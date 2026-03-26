@@ -28,7 +28,7 @@ export default function PersonalitiesSlider() {
           <div className="flex -ml-4 md:-ml-8 touch-pan-y">
             {personalities.slice(0, 16).map((img, i) => (
               <div key={`row1-${i}`} className="flex-[0_0_auto] min-w-0 pl-4 md:pl-8">
-                <div className="w-32 h-32 md:w-48 md:h-48 relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-accent-gold/50 transition-all duration-500 hover:scale-105 z-20 cursor-grab active:cursor-grabbing">
+                <div className="w-32 h-32 md:w-48 md:h-48 relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-accent-gold/50 transition-all duration-500 hover:scale-105 z-20">
                   <Image
                     src={`/images/clientes/${img}`}
                     alt="Cliente da Clínica Sanches"
@@ -47,7 +47,7 @@ export default function PersonalitiesSlider() {
           <div className="flex -ml-4 md:-ml-8 touch-pan-y">
             {personalities.slice(16).map((img, i) => (
                <div key={`row2-${i}`} className="flex-[0_0_auto] min-w-0 pl-4 md:pl-8">
-                <div className="w-32 h-32 md:w-48 md:h-48 relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-accent-gold/50 transition-all duration-500 hover:scale-105 z-20 cursor-grab active:cursor-grabbing">
+                <div className="w-32 h-32 md:w-48 md:h-48 relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-accent-gold/50 transition-all duration-500 hover:scale-105 z-20">
                   <Image
                     src={`/images/clientes/${img}`}
                     alt="Cliente da Clínica Sanches"
