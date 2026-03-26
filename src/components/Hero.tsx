@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Hero() {
@@ -27,12 +28,12 @@ export default function Hero() {
                         Estratégias nutricionais personalizadas com base científica rigorosa para transformar seu metabolismo, saúde e performance.
                     </p>
                     <div className="flex gap-6 items-center justify-center lg:justify-start">
-                        <a href="/servicos" className="bg-gradient-premium text-white px-8 py-4 uppercase text-[10px] font-bold tracking-[0.3em] hover:shadow-glow-gold hover:-translate-y-1 transition-all duration-500 rounded-full shadow-xl shadow-primary-bronze/20">
+                        <Link href="/servicos" className="bg-gradient-premium text-white px-8 py-4 uppercase text-[10px] font-bold tracking-[0.3em] hover:shadow-glow-gold hover:-translate-y-1 transition-all duration-500 rounded-full shadow-xl shadow-primary-bronze/20">
                             Ver Especialidades
-                        </a>
-                        <a href="https://wa.me/5511940057497" className="text-[10px] uppercase tracking-[0.4em] font-black text-deep-charcoal hover:text-accent-gold transition-colors border-b border-transparent hover:border-accent-gold pb-1">
+                        </Link>
+                        <Link href="https://wa.me/5511940057497" target="_blank" className="text-[10px] uppercase tracking-[0.4em] font-black text-deep-charcoal hover:text-accent-gold transition-colors border-b border-transparent hover:border-accent-gold pb-1">
                             Agendar
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </motion.div>

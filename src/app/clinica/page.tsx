@@ -12,6 +12,12 @@ export default function Clinica() {
         "/images/clinica/img-clinica-vivian-new-02.jpeg",
         "/images/clinica/img-clinica-vivian-new-03.jpeg",
         "/images/clinica/img-clinica-vivian-new-04.jpeg",
+        "/images/clinica/img-clinica-vivian-new-05.jpg",
+        "/images/clinica/img-clinica-vivian-new-06.jpg",
+        "/images/clinica/img-clinica-vivian-new-07.jpg",
+        "/images/clinica/img-clinica-vivian-new-08.jpg",
+        "/images/clinica/img-clinica-vivian-new-09.jpg",
+        "/images/clinica/img-clinica-vivian-new-10.jpg",
     ];
 
     return (
