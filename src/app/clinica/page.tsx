@@ -9,15 +9,15 @@ export default function Clinica() {
     const galleryImages = [
         "/images/clinica/img-clinica-vivian-new-000.jpeg",
         "/images/clinica/img-clinica-vivian-new-01.jpeg",
-        "/images/clinica/img-clinica-vivian-new-02.jpeg",
+        "/images/clinica/img-clinica-vivian-nova-01.jpeg",
+        "/images/clinica/img-clinica-vivian-nova-02.jpeg",
+        "/images/clinica/img-clinica-vivian-nova-03.jpeg",
         "/images/clinica/img-clinica-vivian-new-03.jpeg",
         "/images/clinica/img-clinica-vivian-new-04.jpeg",
-        "/images/clinica/img-clinica-vivian-new-05.jpg",
-        "/images/clinica/img-clinica-vivian-new-06.jpg",
+        "/images/clinica/img-clinica-vivian-nova-04.jpeg",
+        "/images/clinica/img-clinica-vivian-nova-05.jpeg",
         "/images/clinica/img-clinica-vivian-new-07.jpg",
-        "/images/clinica/img-clinica-vivian-new-08.jpg",
         "/images/clinica/img-clinica-vivian-new-09.jpg",
-        "/images/clinica/img-clinica-vivian-new-10.jpg",
     ];
 
     return (

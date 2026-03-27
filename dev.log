@@ -1,0 +1,29 @@
+node:internal/modules/cjs/loader:1210
+  throw err;
+  ^
+
+Error: Cannot find module './instrumentation/utils'
+Require stack:
+- /Users/gustavohipolito/Library/CloudStorage/GoogleDrive-gustavohip@gmail.com/Meu Drive/Antigravity/Vivi Sanches (1)/node_modules/next/dist/server/base-server.js
+- /Users/gustavohipolito/Library/CloudStorage/GoogleDrive-gustavohip@gmail.com/Meu Drive/Antigravity/Vivi Sanches (1)/node_modules/next/dist/server/lib/router-server.js
+- /Users/gustavohipolito/Library/CloudStorage/GoogleDrive-gustavohip@gmail.com/Meu Drive/Antigravity/Vivi Sanches (1)/node_modules/next/dist/server/lib/start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+    at /Users/gustavohipolito/Library/CloudStorage/GoogleDrive-gustavohip@gmail.com/Meu Drive/Antigravity/Vivi Sanches (1)/node_modules/next/dist/server/require-hook.js:55:36
+    at Module._load (node:internal/modules/cjs/loader:1038:27)
+    at Module.require (node:internal/modules/cjs/loader:1289:19)
+    at mod.require (/Users/gustavohipolito/Library/CloudStorage/GoogleDrive-gustavohip@gmail.com/Meu Drive/Antigravity/Vivi Sanches (1)/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:182:18)
+    at Object.<anonymous> (/Users/gustavohipolito/Library/CloudStorage/GoogleDrive-gustavohip@gmail.com/Meu Drive/Antigravity/Vivi Sanches (1)/node_modules/next/dist/server/base-server.js:86:17)
+    at Module._compile (node:internal/modules/cjs/loader:1521:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+    at Module.load (node:internal/modules/cjs/loader:1266:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/gustavohipolito/Library/CloudStorage/GoogleDrive-gustavohip@gmail.com/Meu Drive/Antigravity/Vivi Sanches (1)/node_modules/next/dist/server/base-server.js',
+    '/Users/gustavohipolito/Library/CloudStorage/GoogleDrive-gustavohip@gmail.com/Meu Drive/Antigravity/Vivi Sanches (1)/node_modules/next/dist/server/lib/router-server.js',
+    '/Users/gustavohipolito/Library/CloudStorage/GoogleDrive-gustavohip@gmail.com/Meu Drive/Antigravity/Vivi Sanches (1)/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+
+Node.js v20.20.2
+[?25h
