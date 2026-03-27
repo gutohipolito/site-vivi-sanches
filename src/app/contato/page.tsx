@@ -61,9 +61,9 @@ export default function Contato() {
                         <h3 className="text-2xl font-serif text-deep-charcoal mb-2">Email</h3>
                         <p className="text-deep-charcoal/60 mb-8 text-sm">Para dúvidas gerais ou parcerias.</p>
 
-                        <a href="mailto:contato@viviansanches.com.br" className="flex items-center justify-between w-full p-4 rounded-xl bg-deep-charcoal/5 text-deep-charcoal hover:bg-deep-charcoal/10 transition-colors">
+                        <a href="mailto:contato@clinicaviviansanches.com.br" className="flex items-center justify-between w-full p-4 rounded-xl bg-deep-charcoal/5 text-deep-charcoal hover:bg-deep-charcoal/10 transition-colors">
                             <span className="flex items-center gap-3 font-bold text-sm truncate">
-                                contato@viviansanches.com.br
+                                contato@clinicaviviansanches.com.br
                             </span>
                             <ArrowRight size={16} />
                         </a>

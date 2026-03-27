@@ -70,7 +70,7 @@ export default function PoliticaPrivacidade() {
 
                     <h3 className="font-serif text-deep-charcoal text-2xl mt-12">Canal de Privacidade e Atendimento</h3>
                     <p>
-                        Essa empresa possui como meio de receber solicitações ou prestar esclarecimentos, portabilidade, exclusão ou quaisquer solicitações do Titular dos Dados Pessoais o canal de privacidade pode ser acessado pelo e-mail: <strong>contato@viviansanches.com.br</strong>.
+                        Essa empresa possui como meio de receber solicitações ou prestar esclarecimentos, portabilidade, exclusão ou quaisquer solicitações do Titular dos Dados Pessoais o canal de privacidade pode ser acessado pelo e-mail: <strong>contato@clinicaviviansanches.com.br</strong>.
                     </p>
 
                     <p className="text-sm text-deep-charcoal/50 mt-12 border-t pt-6">

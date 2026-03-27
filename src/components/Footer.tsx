@@ -84,8 +84,8 @@ export default function Footer() {
                                 </span>
                             </li>
                             <li className="flex gap-3 items-center">
-                                <a href="mailto:contato@viviansanches.com.br" className="text-white/60 hover:text-white text-sm transition-colors">
-                                    contato@viviansanches.com.br
+                                <a href="mailto:contato@clinicaviviansanches.com.br" className="text-white/60 hover:text-white text-sm transition-colors">
+                                    contato@clinicaviviansanches.com.br
                                 </a>
                             </li>
                             <li className="flex gap-3 items-start">
