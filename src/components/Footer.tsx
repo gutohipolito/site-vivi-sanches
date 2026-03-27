@@ -138,7 +138,7 @@ export default function Footer() {
                     <div className="flex items-center justify-center md:justify-end gap-3 text-[13px] font-normal text-[#f0f0f0]">
                         <span className="opacity-40">Desenvolvido por</span>
                         <a
-                            href="https://asthros.com.br/?utm_source=viviansanches.com.br&utm_medium=footer&utm_campaign=site-institucional"
+                            href="https://asthros.com.br/?utm_source=clinicaviviansanches.com.br&utm_medium=footer&utm_campaign=site-institucional"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center group"

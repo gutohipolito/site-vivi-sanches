@@ -16,6 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://clinicaviviansanches.com.br"),
   title: "Clínica Sanches - Nutrição, saúde e Estética.",
   description: "Clínica especializada em nutrição estratégica, emagrecimento e performance com base científica.",
 };

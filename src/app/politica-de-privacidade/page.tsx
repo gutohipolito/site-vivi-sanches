@@ -16,7 +16,7 @@ export default function PoliticaPrivacidade() {
 
                     <h3 className="font-serif text-deep-charcoal text-2xl">Do Objetivo</h3>
                     <p>
-                        A Equipe Vivian De Campos Sanches Orientação Nutricional comprometida com a proteção de dados pessoais, com a conscientização e publicidade ofertada a você, cliente, Titular dos Dados Pessoais apresenta a forma pela qual coleta e protege seus dados pessoais em seu website: <a href="http://viviansanches.com.br/" className="text-primary-bronze hover:underline">viviansanches.com.br</a>.
+                        A Equipe Vivian De Campos Sanches Orientação Nutricional comprometida com a proteção de dados pessoais, com a conscientização e publicidade ofertada a você, cliente, Titular dos Dados Pessoais apresenta a forma pela qual coleta e protege seus dados pessoais em seu website: <a href="https://clinicaviviansanches.com.br/" className="text-primary-bronze hover:underline">clinicaviviansanches.com.br</a>.
                     </p>
                     <p>
                         A política de privacidade poderá ser eventualmente alterada, e, em caso de alteração, esta será informada e publicada para você, Titular dos Dados Pessoais.
@@ -33,7 +33,7 @@ export default function PoliticaPrivacidade() {
                     <h3 className="font-serif text-deep-charcoal text-2xl mt-12">Público-Alvo</h3>
                     <p>Essa política se aplica ao Titular dos Dados Pessoais que navegue pelos seguintes canais:</p>
                     <ul className="list-disc pl-6 space-y-2">
-                        <li><strong>App/Website (viviansanches.com.br):</strong> consultando serviços, agendando atendimentos e solicitando contato comercial.</li>
+                        <li><strong>App/Website (clinicaviviansanches.com.br):</strong> consultando serviços, agendando atendimentos e solicitando contato comercial.</li>
                         <li><strong>Instagram/Facebook/WhatsApp:</strong> acompanhando informações institucionais, campanhas de publicidade, marketing promocional, entre outros.</li>
                         <li><strong>Prédio físico:</strong> consultas clínicas e utilizando os serviços na modalidade presencial.</li>
                     </ul>
