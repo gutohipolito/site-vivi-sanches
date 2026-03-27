@@ -161,17 +161,24 @@ export default function Servicos() {
                             </div>
                         </div>
                     </div>
-                    <div className="lg:order-1 relative flex justify-center">
-                        <div className="absolute inset-0 bg-accent-gold/20 blur-[80px] rounded-full opacity-60"></div>
-                        <Image
-                            src="/images/clinica/bioimpedancia.png"
-                            alt="Exame de Bioimpedância"
-                            width={500}
-                            height={500}
-                            quality={85}
-                            sizes="(max-width: 1024px) 100vw, 45vw"
-                            className="relative z-10 w-4/5 object-contain drop-shadow-2xl translate-y-4"
-                        />
+                    <div className="lg:order-1 relative group">
+                        {/* Decorative Background Elements */}
+                        <div className="absolute -inset-4 bg-accent-gold/10 rounded-[3.5rem] blur-2xl group-hover:bg-accent-gold/20 transition-colors duration-700"></div>
+                        <div className="absolute inset-0 border border-accent-gold/20 rounded-[3rem] translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-700"></div>
+                        
+                        {/* Image Container */}
+                        <div className="relative z-10 aspect-square rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
+                            <Image
+                                src="/images/clinica/bioimpedancia-2.jpg"
+                                alt="Exame de Bioimpedância InBody"
+                                fill
+                                quality={90}
+                                sizes="(max-width: 1024px) 100vw, 45vw"
+                                className="object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                            />
+                            {/* Overlay Gradient */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-deep-charcoal/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700"></div>
+                        </div>
                     </div>
                 </div>
             </motion.section>
